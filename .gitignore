@@ -1,1 +1,21 @@
 .DS_Store
+
+### VisualStudioCode ###
+.vscode/*
+# !.vscode/settings.json
+# ignore .vscode settings.json for now
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# HubSpot configs
+hubspot.config.yaml
+hubspot.config.yml
+
+# Lock files
+package-lock.json
+yarn.lock
