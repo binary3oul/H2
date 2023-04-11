@@ -1,0 +1,30 @@
+{% macro menu_items() %}
+  {% set menu = menu(module.menu, "site_root").children %}
+
+  {% macro render_link_item(link, depth) %}
+    <li>
+        <a class="text-base font-medium text-gray-800">{{ link.label }}</a>
+    </li>
+  {% endmacro %}
+
+  {% for link in menu %}
+    {{ render_link_item(link, 1) }}
+  {% endfor %}
+
+{% endmacro %}
+
+{# Desktop menu #}
+
+<nav aria-label="Main menu">
+  <ul class="flex gap-6">
+    {{ menu_items() }}
+  </ul>
+</nav>
+
+{# Mobile menu #}
+
+<nav class="menu menu--mobile" aria-label="Main menu">
+  <ul class="menu__wrapper no-list">
+    {{ menu_items() }}
+  </ul>
+</nav>

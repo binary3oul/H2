@@ -1,0 +1,45 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+<header class="header shadow">
+
+  {% dnd_area "header-top" label="Top header", class="content-wrapper" %}
+  {% end_dnd_area %}
+
+  {# Main header #}
+
+  <div class="container mx-auto">
+    <div class="flex items-center justify-between">
+      <div class="w-52 h-20">
+        {% module "logo"
+          path="@hubspot/logo",
+          label="Logo",
+          logo="../../images/logo.png",
+          logo_alt="The Herd Agency"
+          class="w-52 h-20"
+        %}
+      </div>
+
+      <div class="header__navigation header--element">
+        {% module "custom_menu"
+          path="../../modules/menu",
+          label="Menu",
+        %}
+      </div>
+
+      <div>
+        <a href="https://google.com" class="inline-flex items-center justify-start h-12 px-7 py-4 bg-green-100 rounded-md text-lg font-semibold text-green-600">Contract</a>
+      </div>
+    </div>
+  </div>
+
+  {# Bottom header drag and drop area #}
+
+  {% dnd_area "header-bottom"
+    label="Bottom header",
+    class="content-wrapper"
+  %}
+  {% end_dnd_area %}
+
+</header>

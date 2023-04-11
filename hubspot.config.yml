@@ -1,0 +1,12 @@
+defaultPortal: theherddev
+portals:
+  - name: theherddev
+    portalId: 24467831
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CJ_a4ub2MBILAA0AAAAA4A0DQAIY97LVCyCxn7YVKO7pDDIUHQRXnThLsfwGFoSaC101DSKgcUU6NwAABEEAAAB4AAAAAAAAAAAAAAAAAAAABAAAwAcA_v8xPAAABgBEAGAAAAAAAAAAAAAAAAAAMAJCFO4JpshxHdYIbIfdSWghwWDM5N_YSgNuYTFSAFoA
+        expiresAt: '2023-04-10T20:25:52.181Z'
+    personalAccessKey: >-
+      CiRiZDk0ZjE1OS0xMjVhLTQ0ZTQtOTg5Yy0wODU0ZDZkNjBiZGUQ97LVCxixn7YVKhkABeaRguSAUuqEAcuvTPyqPT6PazISu695SgNuYTE
