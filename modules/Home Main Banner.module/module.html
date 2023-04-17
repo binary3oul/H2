@@ -1,0 +1,72 @@
+<div class="">
+  <div class="home-main-banner
+  before:bg-[url(https://24467831.fs1.hubspotusercontent-na1.net/hubfs/24467831/banner-shap.png)]
+  before:content-['']
+  before:absolute
+  before:w-full
+  before:h-[500px]
+  before:bg-no-repeat
+  before:bg-bottom
+  before:bg-contain
+  before:left-0
+  before:-bottom-10
+  relative
+  ">
+    <div class="inner-main container mx-auto flex flex-wrap md:flex-nowrap items-center justify-between relative z-1">
+      <div class="contentdiv  max-w-[100%] md:max-w-[340px] lg:max-w-[450px]">
+        <h2 class="heading not-italic font-extrabold text-5xl leading-[50px] md:text-[60px] md:leading-[65px] lg:text-[75px] lg:leading-[72px] text-[#252525]">{{ module.heading }}</h2>
+        <div class="content text-[#5d636d] text-lg not-italic font-normal leading-[23px] mt-[30px] mb-[55px] mx-0">{{ module.content }}</div>
+        <div class="cstmbtndiv mt-5">
+          <a class="cstm-btn text-white font-semibold text-lg px-7 py-3 rounded-md bg-[#e76642]" href="{{ module.button_link }}">{{ module.button_label }}</a>
+          <a class="link-btn font-bold text-lg leading-[23px] underline text-[#5D636D] ml-[30px]" href="{{ module.button_link_2 }}">{{ module.button_text_2 }}</a>
+        </div>
+      </div>
+      <div class="bannerdiv relative w-auto mt-[80px] sm:mt-[0px]">
+        <div class="inner-image">
+          {% if module.banner_image.src %}
+          {% set sizeAttrs = 'width="{{ module.banner_image.width }}" height="{{ module.banner_image.height }}"' %}
+          {% if module.banner_image.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.banner_image.width }}" height="{{ module.banner_image.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.banner_image.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.banner_image.max_width }}" height="{{ module.banner_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.banner_image.loading != 'disabled' ? 'loading="{{ module.banner_image.loading }}"' : '' %}
+          <img src="{{ module.banner_image.src }}" alt="{{ module.banner_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }} class="ml-auto">
+          {% endif %}
+        </div>
+
+        <div class="wave-icon absolute right-[-15px] md:right-[-30px] top-[50px] md:top-[85px]">
+          <svg  class="w-[110px] h-[auto] md:w-[162px] md:h-[159px]"  viewBox="0 0 162 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M126.414 90.9933L42.4011 40.1389C31.8638 56.7468 24.7054 90.9931 59.238 110.579C95.1451 130.944 120.171 104.394 126.414 90.9933Z" fill="#E76642"/>
+            <path d="M68.8984 68.8342L79.0349 78.9707L89.1714 68.8342L99.3079 78.9707L109.444 68.8342L119.581 78.9707L129.717 68.8342L139.854 78.9707L149.99 68.8342L160.127 78.9707" stroke="black" stroke-width="3"/>
+            <path d="M68.8984 55.4336L79.0349 65.5701L89.1714 55.4336L99.3079 65.5701L109.444 55.4336L119.581 65.5701L129.717 55.4336L139.854 65.5701L149.99 55.4336L160.127 65.5701" stroke="black" stroke-width="3"/>
+            <path d="M68.8984 41.689L79.0349 51.8255L89.1714 41.689L99.3079 51.8255L109.444 41.689L119.581 51.8255L129.717 41.689L139.854 51.8255L149.99 41.689L160.127 51.8255" stroke="black" stroke-width="3"/>
+          </svg>
+        </div>  
+        
+        {% if module.project_text %}
+        <div class="project-div absolute top-[-4%] left-[7%]">
+          <div class="inner-pro text-center shadow-[0px_3.4px_22.95px_rgba(0,0,0,0.1)] w-[136px] flex flex-col items-center justify-center pb-2.5 rounded-[10.2px] bg-white">
+            <img src="https://24467831.fs1.hubspotusercontent-na1.net/hubfs/24467831/Group%2076%20(2).png" class="relative -top-4">
+            <div class="text-div font-bold text-md text-[#CD5C00]">
+              {{ module.project_text }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        
+          {% if module.partner_text %}
+        <div class="partner-div absolute right-1.5 -bottom-10">
+          <div class="inner-pro text-center shadow-[0px_3.4px_22.95px_rgba(0,0,0,0.1)] w-[136px] flex flex-col items-center justify-center pb-2.5 rounded-[10.2px] bg-white">
+            <img src="https://24467831.fs1.hubspotusercontent-na1.net/hubfs/24467831/Group%2084.png" class="relative -top-4">
+            <div class="text-div font-bold text-md text-[#CD5C00]">
+              {{ module.partner_text }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        
+      </div>
+    </div>
+  </div>
+</div>

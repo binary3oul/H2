@@ -1,0 +1,87 @@
+[ {
+  "id" : "d8471d68-72df-4ab0-28cf-74df3e75a617",
+  "name" : "top_heading",
+  "display_width" : null,
+  "label" : "Top heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "2e2a214e-28f3-8088-4e7c-e1bbdd38a5f7",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "fdd4d8bb-4220-e580-152d-b0b04abaf8a1",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "17d6c939-b784-118c-1d0a-a124a573b06e",
+  "name" : "icon_group",
+  "display_width" : null,
+  "label" : "Icon group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "55a4e7f0-e5f2-c7ce-3668-44b03f021cd6",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "8a39fe1c-0366-06b5-f42f-ac142bbf0cdf",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+} ]

@@ -1,93 +1,158 @@
-[
-  {
-    "label": "Menu",
-    "name": "menu",
-    "type": "menu",
-    "default": "default"
-  },
-  {
-    "label": "Max levels",
-    "name": "max_levels",
-    "type": "number",
-    "help_text": "Determines the number of menu tree children that can be expanded in the menu",
-    "display": "text",
-    "max": 3,
-    "min": 1,
-    "step": 1,
-    "required": true,
-    "default": 3
-  },
-  {
-    "label": "Styles",
-    "name": "styles",
-    "type": "group",
-    "tab": "STYLE",
-    "children": [
-      {
-        "label": "Text",
-        "name": "text",
-        "type": "group",
-        "children": [
-          {
-            "label": "Color",
-            "name": "color",
-            "type": "color",
-            "visibility": {
-              "hidden_subfields": {
-                "opacity": true
-              }
-            }
-          }
-        ]
+[ {
+  "id" : "menu",
+  "name" : "menu",
+  "display_width" : null,
+  "label" : "Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "default" : "default"
+}, {
+  "id" : "max_levels",
+  "name" : "max_levels",
+  "display_width" : null,
+  "label" : "Max levels",
+  "help_text" : "Determines the number of menu tree children that can be expanded in the menu",
+  "required" : true,
+  "locked" : false,
+  "display" : "text",
+  "min" : 1,
+  "max" : 3,
+  "step" : 1,
+  "type" : "number",
+  "default" : 3
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "display_width" : null,
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.text",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.text.color",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : null,
+        "controlling_value_regex" : null,
+        "property" : null,
+        "operator" : null,
+        "access" : null,
+        "hidden_subfields" : {
+          "opacity" : true
+        }
       },
-      {
-        "label": "Drop downs",
-        "name": "drop_downs",
-        "type": "group",
-        "children": [
-          {
-            "label": "Text",
-            "name": "text",
-            "type": "group",
-            "children": [
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "visibility": {
-                  "hidden_subfields": {
-                    "opacity": true
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "label": "Background",
-            "name": "background",
-            "type": "group",
-            "children": [
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color"
-              }
-            ]
-          },
-          {
-            "label": "Border",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label" : "Border",
-                "name" : "border",
-                "type" : "border"
-              }
-            ]
-          }
-        ]
+      "type" : "color",
+      "default" : {
+        "color" : null,
+        "opacity" : null
       }
-    ]
-  }
-]
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group"
+  }, {
+    "id" : "styles.drop_downs",
+    "name" : "drop_downs",
+    "display_width" : null,
+    "label" : "Drop downs",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.drop_downs.text",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.drop_downs.text.color",
+        "name" : "color",
+        "display_width" : null,
+        "label" : "Color",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : null,
+          "controlling_value_regex" : null,
+          "property" : null,
+          "operator" : null,
+          "access" : null,
+          "hidden_subfields" : {
+            "opacity" : true
+          }
+        },
+        "type" : "color",
+        "default" : {
+          "color" : null,
+          "opacity" : null
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group"
+    }, {
+      "id" : "styles.drop_downs.background",
+      "name" : "background",
+      "display_width" : null,
+      "label" : "Background",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.drop_downs.background.color",
+        "name" : "color",
+        "display_width" : null,
+        "label" : "Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : null,
+          "opacity" : null
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group"
+    }, {
+      "id" : "styles.drop_downs.border",
+      "name" : "border",
+      "display_width" : null,
+      "label" : "Border",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.drop_downs.border.border",
+        "name" : "border",
+        "display_width" : null,
+        "label" : "Border",
+        "required" : false,
+        "locked" : false,
+        "allow_custom_border_sides" : false,
+        "type" : "border",
+        "default" : { }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group"
+} ]

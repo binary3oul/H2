@@ -1,0 +1,21 @@
+<div class="home-logolist">
+  <div class="flex flex-col items-center justify-center py-14 md:py-24">
+    <h2 class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] uppercase mb-8">{{ module.heading }}</h2>
+    <ul class="flex flex-wrap md:flex-nowrap gap-4 items-end container mx-auto justify-center">
+      {% for item in module.logo %}
+      <li class="w-[47%] md:w-[auto]">
+        {% if item.src %}
+        {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}"' %}
+        {% if item.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif item.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.max_width }}" height="{{ item.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading }}"' : '' %}
+        <img class="m-auto" src="{{ item.src }}" alt="{{ item.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul> 
+  </div>
+</div>

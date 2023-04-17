@@ -1,0 +1,121 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+@media (max-width:1280px){
+  .bannerdiv .wave-icon {
+    right: -10px;
+  }
+  .bannerdiv .wave-icon svg {
+    width: 120px;
+    height: auto;
+  }
+  header.header .container {
+    padding: 0 1rem;
+  }
+}
+
+
+@media (max-width:1024px){
+  body .container {
+    max-width: 100%;
+  }
+  .contentdiv h2.heading {
+    font-size: 60px;
+    line-height: 62px;
+  }
+  .home-main-banner .inner-main .contentdiv {
+    max-width: 400px;
+  }
+}
+
+@media (max-width:991px){
+  .contentdiv h2.heading {
+    font-size: 46px;
+    line-height: 48px;
+  }
+  .contentdiv .content {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 20px 0 40px;
+  }
+  .home-main-banner .inner-main .contentdiv {
+    max-width: 350px;
+    padding-right: 30px;
+  }
+  .cstmbtndiv a.cstm-btn {
+    font-size: 16px;
+  }
+  a.link-btn {
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 20px;
+  }
+  header .gap-6 {
+    gap: 1rem;
+  }
+  header .text-lg {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width:767px){
+  .home-main-banner .inner-main {
+    flex-wrap: wrap;
+  }
+  .home-main-banner .inner-main .contentdiv {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 80px;
+  }
+  .contentdiv h2.heading {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  .home-main-banner {
+    padding: 0px 20px;
+  }
+  .inner-image { 
+    padding-left: 32px;
+  }
+  .home-main-banner:before {
+    bottom: 65px;
+    height: 160px;
+  }
+  .text-div strong {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .text-div {
+    font-size: 14px;
+  }
+  .inner-pro {
+    width: 120px;
+  }
+  .bannerdiv .wave-icon svg {
+    width: 100px;
+  }
+  .bannerdiv .wave-icon {
+    top: 40px;
+    right: -15px;
+  }
+  .inner-pro img {
+    margin: 0 auto -4px;
+    top: -12px;
+    width: 30px;
+  }
+}
+
+
+
+
+
+

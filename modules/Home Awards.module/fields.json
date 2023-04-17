@@ -1,0 +1,87 @@
+[ {
+  "id" : "000cae97-5147-f7d8-b96d-89f718157e60",
+  "name" : "top_label",
+  "display_width" : null,
+  "label" : "Top Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "a71a9e02-fda2-1753-4447-45396822f737",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "dbb32763-8092-0e14-04ba-d302d2758a4f",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "a4ab1f88-5433-7a98-5f5f-5cee6bbe2711",
+  "name" : "link_label",
+  "display_width" : null,
+  "label" : "link label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "ec028d84-1aaa-3465-e5fb-15076942d7ba",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "663cf331-707b-984e-4a4f-1e8476c55cdb",
+  "name" : "award_image",
+  "display_width" : null,
+  "label" : "Award image",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+} ]
