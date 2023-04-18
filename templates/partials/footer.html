@@ -3,10 +3,10 @@
   label: Footer
 -->
 <footer class="footer bg-[#242C3E] w-full">
-  <div class="container">
-    <div>
+  <div class="container py-16 grid grid-cols-1 md:grid-cols-4 w-fit md:w-full">
+    <div class="col-span-1">
       <img src={{ get_asset_url('/theherd/images/footer-logo.png') }} alt="The Herd" />
-      <ul class="flex items-center gap-4">
+      <ul class="flex items-center gap-4 my-10 ml-1">
         <li>
           <a href="/">
             <img src={{ get_asset_url('/theherd/images/icons/facebook.svg') }} />
@@ -33,6 +33,33 @@
           </a>
         </li>
       </ul>
+    </div>
+    <div class="col-span-1 text-white space-y-2 my-4">
+      <h1 class="font-bold">About</h1>
+      <ul class="space-y-2">
+        <li>Services</li>
+        <li>Projects</li>
+        <li>Industries</li>
+        <li>Blog</li>
+        <li>Resources</li>
+      </ul>
+    </div>
+    <div class="col-span-1 md:col-span-2 my-4 space-y-2 text-white">
+      <h1 class="font-bold">Services</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 space-y-2 md:space-y-0">
+        <ul class="space-y-2 col-span-1">
+          <li>Video & Photo</li>
+          <li>Design</li>
+          <li>Web Development</li>
+          <li>Web Optimization</li>
+        </ul>
+        <ul class="space-y-2 col-span-1">
+          <li>Digital Marketing</li>
+          <li>Branding</li>
+          <li>Hubspot CRM</li>
+          <li>Copywriting</li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
