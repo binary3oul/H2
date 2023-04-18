@@ -73,6 +73,95 @@
 
       <main id="main-content" class="body-container-wrapper">
         {% block body %} {% endblock body %}
+
+        <!-- Services Section -->
+        <div class="container flex flex-col items-center justify-center space-y-6 py-20">
+          <div class="flex flex-col text-center space-y-4">
+            <label class="text-xs text-[#E76643] font-semibold">OUR SERVICES</label>
+            <label class="text-5xl font-bold">What We Do</label>
+          </div>
+          <div class="flex w-full justify-center items-center">
+            <div class="relative text-sm w-80 h-96">
+              <div class="absolute right-0 font-bold">
+                <img src={{ get_asset_url('/theherd/images/polygon-green.png') }} class="w-48" />
+                <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4 text-white">
+                  Videography &<br/>Photography
+                </label>
+              </div>
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 font-bold">
+                <img src={{ get_asset_url('/theherd/images/polygon.png') }} class="w-48" />
+                <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+                  Digital Design
+                </label>
+              </div>
+              <div class="absolute right-0 bottom-0 font-bold">
+                <img src={{ get_asset_url('/theherd/images/polygon.png') }} class="w-48" />
+                <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+                  Branding
+                </label>
+              </div>
+              <label class="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#5B76FF] to-[#9452FF]">
+                Creative
+              </label>
+            </div>
+            <img src={{ get_asset_url('/theherd/images/services.png') }} class="w-[30rem] translate-x-8" />
+            <div class="relative text-sm w-80 h-96">
+              <div class="absolute left-0 font-bold">
+                <img src={{ get_asset_url('/theherd/images/polygon.png') }} class="w-48" />
+                <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+                  Digital Marketing<br/>& Advertising
+                </label>
+              </div>
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 font-bold">
+                <img src={{ get_asset_url('/theherd/images/polygon.png') }} class="w-48" />
+                <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+                  Web and App<br/>Development
+                </label>
+              </div>
+              <div class="absolute left-0 bottom-0 font-bold">
+                <img src={{ get_asset_url('/theherd/images/polygon.png') }} class="w-48" />
+                <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+                  Web Optimization<br/>& Maintenance
+                </label>
+              </div>
+              <label class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#9452FF] to-[#4617FF]">
+                Marketing
+              </label>
+            </div>  
+          </div>
+          <a href="/" class="inline-flex items-center justify-center h-12 px-7 py-3 bg-red-500 rounded-md text-lg font-semibold text-white">See All Services</a>
+        </div>
+
+        <!-- Development & Technical Section -->
+        <div class="w-full flex flex-col items-center py-20 bg-[#FAFBFF]">
+          <div class="container flex items-center">
+            <div class="flex flex-col space-y-8 w-1/2">
+              <div class="flex flex-col space-y-4">
+                <label class="text-xs text-[#E76643] font-semibold">HUBSPOT</label>
+                <label class="text-5xl font-bold">HubSpot Development<br />& Technical Consulting</label>
+              </div>
+              <label class="text-lg leading-none text-[#5D636D]">Work with a certified Technical HubSpot Solutions partner who can help your team develop strategy and provide hands-on support to execute your HubSpot implementation.</label>
+              <a href="/" class="px-7 py-3 bg-[#D4F9F2] rounded-md text-lg font-semibold text-[#00997C] w-fit">Learn More</a>
+            </div>
+            <img src={{ get_asset_url('/theherd/images/hubspot.png') }} class="w-1/2 pl-12" />
+          </div>
+          <div class="container flex justify-around text-base mt-24 z-10 font-semibold">
+            <div class="flex flex-col items-center space-y-4">
+              <span>Hubspot Onboarding</span>
+              <img src={{ get_asset_url('/theherd/images/rocket.png') }} class="w-12 h-12 p-2 bg-white rounded-full border-[#243347] border-2" />
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+              <span>Hubspot CMS Development</span>
+              <img src={{ get_asset_url('/theherd/images/code.png') }} class="w-12 h-12 p-2 bg-white rounded-full border-[#243347] border-2" />
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+              <span>Strategy & Consulting</span>
+              <img src={{ get_asset_url('/theherd/images/headphone.png') }} class="w-12 h-12 p-2 bg-white rounded-full border-[#243347] border-2" />
+            </div>
+          </div>
+          <div class="w-full border-b-2 border-[#243347] -translate-y-6">
+          </div>
+        </div>
         
         <!-- Contact Section -->
         <div class="flex">
