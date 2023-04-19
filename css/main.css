@@ -6,6 +6,11 @@ body {
   font-style: normal;
 }
 
+.blue-gradient {
+  background: rgb(231,111,66);
+  background: linear-gradient(180deg, rgba(231,111,66,0.04) 0%, rgba(0,133,255,0.05) 100%);
+}
+
 /* Tools
 Any animations, or functions used throughout the project.
 Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
