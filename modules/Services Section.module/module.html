@@ -1,0 +1,124 @@
+<div class="cstm-home-service">
+  <!-- Services Section -->
+  <div class="container flex flex-col items-center justify-center space-y-6 py-20">
+    <div class="flex flex-col text-center space-y-4">
+      <label class="text-xs text-[#E76643] font-semibold">{{ module.top_heading }}</label>
+      <label class="text-5xl font-bold">{{ module.heading }}</label>
+    </div>
+    <div class="flex w-full justify-center items-center">
+      <div class="relative text-sm w-80 h-96">
+        <div class="absolute right-0 font-bold">
+          {% if module.videography_group.image.src %}
+          {% set sizeAttrs = 'width="{{ module.videography_group.image.width }}" height="{{ module.videography_group.image.height }}"' %}
+          {% if module.videography_group.image.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.videography_group.image.width }}" height="{{ module.videography_group.image.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.videography_group.image.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.videography_group.image.max_width }}" height="{{ module.videography_group.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.videography_group.image.loading != 'disabled' ? 'loading="{{ module.videography_group.image.loading }}"' : '' %}
+          <img class="w-48" src="{{ module.videography_group.image.src }}" alt="{{ module.videography_group.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4 text-white">
+            {% inline_text field="videography_group.text_field" value="{{ module.videography_group.text_field }}" %}
+          </label>
+        </div>
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 font-bold">
+          {% if module.digital_design_group.image_field.src %}
+          {% set sizeAttrs = 'width="{{ module.digital_design_group.image_field.width }}" height="{{ module.digital_design_group.image_field.height }}"' %}
+          {% if module.digital_design_group.image_field.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.digital_design_group.image_field.width }}" height="{{ module.digital_design_group.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.digital_design_group.image_field.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.digital_design_group.image_field.max_width }}" height="{{ module.digital_design_group.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.digital_design_group.image_field.loading != 'disabled' ? 'loading="{{ module.digital_design_group.image_field.loading }}"' : '' %}
+          <img class="w-48" src="{{ module.digital_design_group.image_field.src }}" alt="{{ module.digital_design_group.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+            {% inline_text field="digital_design_group.text_field_1" value="{{ module.digital_design_group.text_field_1 }}" %}
+          </label>
+        </div>
+        <div class="absolute right-0 bottom-0 font-bold">
+          {% if module.branding_group.image_field_1.src %}
+          {% set sizeAttrs = 'width="{{ module.branding_group.image_field_1.width }}" height="{{ module.branding_group.image_field_1.height }}"' %}
+          {% if module.branding_group.image_field_1.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.branding_group.image_field_1.width }}" height="{{ module.branding_group.image_field_1.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.branding_group.image_field_1.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.branding_group.image_field_1.max_width }}" height="{{ module.branding_group.image_field_1.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.branding_group.image_field_1.loading != 'disabled' ? 'loading="{{ module.branding_group.image_field_1.loading }}"' : '' %}
+          <img class="w-48" src="{{ module.branding_group.image_field_1.src }}" alt="{{ module.branding_group.image_field_1.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+            {% inline_text field="branding_group.text_field_2" value="{{ module.branding_group.text_field_2 }}" %}
+          </label>
+        </div>
+        <label class="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#5B76FF] to-[#9452FF]">
+          {{ module.creative }}
+        </label>
+      </div>
+      {% if module.main_image.src %}
+      {% set sizeAttrs = 'width="{{ module.main_image.width }}" height="{{ module.main_image.height }}"' %}
+      {% if module.main_image.size_type == 'auto' %}
+      {% set sizeAttrs = 'width="{{ module.main_image.width }}" height="{{ module.main_image.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif module.main_image.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="{{ module.main_image.max_width }}" height="{{ module.main_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+      {% set loadingAttr = module.main_image.loading != 'disabled' ? 'loading="{{ module.main_image.loading }}"' : '' %}
+      <img class="w-[30rem] translate-x-8" src="{{ module.main_image.src }}" alt="{{ module.main_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+      <div class="relative text-sm w-80 h-96">
+        <div class="absolute left-0 font-bold">
+          {% if module.digital_marketing_group.image_field_2.src %}
+          {% set sizeAttrs = 'width="{{ module.digital_marketing_group.image_field_2.width }}" height="{{ module.digital_marketing_group.image_field_2.height }}"' %}
+          {% if module.digital_marketing_group.image_field_2.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.digital_marketing_group.image_field_2.width }}" height="{{ module.digital_marketing_group.image_field_2.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.digital_marketing_group.image_field_2.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.digital_marketing_group.image_field_2.max_width }}" height="{{ module.digital_marketing_group.image_field_2.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.digital_marketing_group.image_field_2.loading != 'disabled' ? 'loading="{{ module.digital_marketing_group.image_field_2.loading }}"' : '' %}
+          <img class="w-48" src="{{ module.digital_marketing_group.image_field_2.src }}" alt="{{ module.digital_marketing_group.image_field_2.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+            {% inline_text field="digital_marketing_group.text_field_3" value="{{ module.digital_marketing_group.text_field_3 }}" %}
+          </label>
+        </div>
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 font-bold">
+          {% if module.development_group.image_field_3.src %}
+          {% set sizeAttrs = 'width="{{ module.development_group.image_field_3.width }}" height="{{ module.development_group.image_field_3.height }}"' %}
+          {% if module.development_group.image_field_3.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.development_group.image_field_3.width }}" height="{{ module.development_group.image_field_3.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.development_group.image_field_3.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.development_group.image_field_3.max_width }}" height="{{ module.development_group.image_field_3.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.development_group.image_field_3.loading != 'disabled' ? 'loading="{{ module.development_group.image_field_3.loading }}"' : '' %}
+          <img class="w-48" src="{{ module.development_group.image_field_3.src }}" alt="{{ module.development_group.image_field_3.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+            {% inline_text field="development_group.text_field_4" value="{{ module.development_group.text_field_4 }}" %}
+          </label>
+        </div>
+        <div class="absolute left-0 bottom-0 font-bold">
+          {% if module.web_optimization_group.image_field_3.src %}
+          {% set sizeAttrs = 'width="{{ module.web_optimization_group.image_field_3.width }}" height="{{ module.web_optimization_group.image_field_3.height }}"' %}
+          {% if module.web_optimization_group.image_field_3.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.web_optimization_group.image_field_3.width }}" height="{{ module.web_optimization_group.image_field_3.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.web_optimization_group.image_field_3.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.web_optimization_group.image_field_3.max_width }}" height="{{ module.web_optimization_group.image_field_3.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.web_optimization_group.image_field_3.loading != 'disabled' ? 'loading="{{ module.web_optimization_group.image_field_3.loading }}"' : '' %}
+          <img class="w-48" src="{{ module.web_optimization_group.image_field_3.src }}" alt="{{ module.web_optimization_group.image_field_3.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          <label class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-4">
+            {% inline_text field="web_optimization_group.text_field_4" value="{{ module.web_optimization_group.text_field_4 }}" %}
+          </label>
+        </div>
+        <label class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#9452FF] to-[#4617FF]">
+          {{ module.marketing }}
+        </label>
+      </div>  
+    </div>
+    {% if module.button_text  %}
+    <a href="{{ module.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 bg-red-500 rounded-md text-lg font-semibold text-white">{{ module.button_text }}</a>
+    {% endif %}
+  </div>
+</div>

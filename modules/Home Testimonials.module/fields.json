@@ -31,4 +31,79 @@
   "allow_new_line" : false,
   "show_emoji_picker" : false,
   "type" : "text"
+}, {
+  "id" : "674b7221-551a-2412-6ba1-515909fd5e13",
+  "name" : "testimonials_group",
+  "display_width" : null,
+  "label" : "Testimonials Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "ed8c1722-8124-ff20-784c-701a9a7c2d74",
+    "name" : "logo",
+    "display_width" : null,
+    "label" : "Logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "9601b28e-5824-5e6c-9169-fe366ea17a78",
+    "name" : "user_name",
+    "display_width" : null,
+    "label" : "User Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "c4fe7e3d-e7fe-01ab-a603-303c9c4822e9",
+    "name" : "designation",
+    "display_width" : null,
+    "label" : "Designation",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "ac7a1a08-58f5-e82f-0e1a-ae497d2433fc",
+    "name" : "testimonials_content",
+    "display_width" : null,
+    "label" : "Testimonials Content",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
 } ]

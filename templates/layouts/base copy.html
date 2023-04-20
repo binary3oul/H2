@@ -74,6 +74,26 @@
       <main id="main-content" class="body-container-wrapper">
         {% block body %} {% endblock body %}
         
+        <!-- Contact Section -->
+        <div class="flex">
+          <div class="w-1/2 green-gradient flex justify-end py-40 pr-28 relative">
+            <img src={{ get_asset_url('/theherd/images/herd-dog.png') }} class="absolute top-40 -right-14" />
+            <div class="max-w-[600px]">
+              <h2 class="mb-7 text-4xl font-bold leading-10 text-gray-800">Book a Consultation</h2>
+              <p class="mb-7 text-lg leading-snug text-gray-600">Creating effective digital marketing campaigns requires a clear strategy and significant effort.</p>
+              <a href="/" class="inline-flex items-center justify-center h-12 px-7 py-3 bg-red-500 rounded-md text-lg font-semibold text-white">Book Now!</a>
+            </div>
+          </div>
+          <div class="flex py-40 pl-28">
+            <div class="max-w-[600px]">
+              <h2 class="mb-7 w-1/2 text-4xl font-bold leading-10 text-gray-800">Send a message</h2>
+              <p class="mb-7 text-lg leading-snug text-gray-600">Creating effective digital marketing campaigns requires a clear strategy and significant effort.</p>
+              <a href="/" class="inline-flex items-center justify-start h-12 px-7 py-4 bg-green-100 rounded-md text-lg font-semibold text-green-600">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        
       </main>
       {% block footer %} {% global_partial path="../partials/footer.html" %} {%
       endblock footer %}

@@ -1,0 +1,49 @@
+<div class="cstmHome-dev">
+  <!-- Development & Technical Section -->
+  <div class="w-full flex flex-col items-center py-20 bg-[#FAFBFF]">
+    <div class="container flex items-center">
+      <div class="flex flex-col space-y-8 w-1/2">
+        <div class="flex flex-col space-y-4">
+          <label class="text-xs text-[#E76643] font-semibold">{{ module.top_heading }}</label>
+          <label class="text-5xl font-bold">{{ module.heading }}</label>
+        </div>
+        <label class="text-lg leading-none text-[#5D636D]">{{ module.content }}</label>
+        {% if module.button_text %}
+        <a href="{{ module.link_field }}" class="px-7 py-3 bg-[#D4F9F2] rounded-md text-lg font-semibold text-[#00997C] w-fit">{{ module.button_text }}</a>
+        {% endif %}
+      </div>
+
+      {% if module.main_image.src %}
+      {% set sizeAttrs = 'width="{{ module.main_image.width }}" height="{{ module.main_image.height }}"' %}
+      {% if module.main_image.size_type == 'auto' %}
+      {% set sizeAttrs = 'width="{{ module.main_image.width }}" height="{{ module.main_image.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif module.main_image.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="{{ module.main_image.max_width }}" height="{{ module.main_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+      {% set loadingAttr = module.main_image.loading != 'disabled' ? 'loading="{{ module.main_image.loading }}"' : '' %}
+      <img class="w-1/2 pl-12" src="{{ module.main_image.src }}" alt="{{ module.main_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+
+
+    </div>
+    <div class="container flex justify-around text-base mt-24 z-10 font-semibold">
+      {% for item in module.icon_group %}
+      {% if item.icon.src %}
+      <div class="flex flex-col items-center space-y-4">
+        <span>	{% inline_text field="text_field" value="{{ item.text_field }}" %}</span>
+        {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}"' %}
+        {% if item.icon.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif item.icon.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.icon.max_width }}" height="{{ item.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
+        <img class="w-12 h-12 p-2 bg-white rounded-full border-[#243347] border-2" src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="w-full border-b-2 border-[#243347] -translate-y-6">
+    </div>
+  </div>
+</div>
