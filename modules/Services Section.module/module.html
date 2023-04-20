@@ -2,7 +2,7 @@
   <!-- Services Section -->
   <div class="container flex flex-col items-center justify-center space-y-6 py-20">
     <div class="flex flex-col text-center space-y-4">
-      <label class="text-xs text-[#E76643] font-semibold">{{ module.top_heading }}</label>
+      <label class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block uppercase">{{ module.top_heading }}</label>
       <label class="text-5xl font-bold">{{ module.heading }}</label>
     </div>
     <div class="flex w-full justify-center items-center">
@@ -64,7 +64,7 @@
       {% set sizeAttrs = 'width="{{ module.main_image.max_width }}" height="{{ module.main_image.max_height }}" style="max-width: 100%; height: auto;"' %}
       {% endif %}
       {% set loadingAttr = module.main_image.loading != 'disabled' ? 'loading="{{ module.main_image.loading }}"' : '' %}
-      <img class="w-[30rem] translate-x-8" src="{{ module.main_image.src }}" alt="{{ module.main_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      <img class="md:w-[10rem] lg:w-[20rem] xl:w-[30rem] translate-x-8" src="{{ module.main_image.src }}" alt="{{ module.main_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
       {% endif %}
       <div class="relative text-sm w-80 h-96">
         <div class="absolute left-0 font-bold">
@@ -118,7 +118,7 @@
       </div>  
     </div>
     {% if module.button_text  %}
-    <a href="{{ module.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 bg-red-500 rounded-md text-lg font-semibold text-white">{{ module.button_text }}</a>
+    <a href="{{ module.link_field }}" class="cstm-btn text-white font-semibold text-lg px-7 py-3 rounded-md bg-[#e76642]">{{ module.button_text }}</a>
     {% endif %}
   </div>
 </div>

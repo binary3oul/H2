@@ -1,16 +1,16 @@
-<div class="cstm-homeTestimonials py-14 md:py-24">
+<div class="cstm-homeTestimonials">
   <div>
     <div class="container mx-auto">
-      <span class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2 w-full block">{{ module.text_label }}</span>
+      <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block uppercase">{{ module.text_label }}</span>
       <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">{{ module.heading }}</h2>
       <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[495px] mx-auto">{{ module.content }}</p>
-      <div class="testimonial-glide glide w-[730px] mx-auto">
+      <div class="testimonial-glide glide w-[730px] mx-auto mt-12">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             {% for item in module.testimonials_group %}
             {% if item.logo.src %}
-            <li class="glide__slide p-4">
-              <div class="shadow rounded-2xl flex flex-col p-12">
+            <li class="glide__slide p-4"> 
+              <div class="shadow-[0px_0px_28px_rgba(36,51,71,0.06)] rounded-2xl flex flex-col p-8 bg-white	">
                 <div class="flex">
                   <div class="mr-3">
                     {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
@@ -24,12 +24,12 @@
                   </div>
                   <div>
                     <h5 class="text-lg font-bold leading-none">{% inline_text field="user_name" value="{{ item.user_name }}" %}</h5>
-                    <span class="text-xs font-semibold tracking-widest leading-5 text-red-500 uppercase">{% inline_text field="designation" value="{{ item.designation }}" %}</span>
+                    <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2 w-full block">{% inline_text field="designation" value="{{ item.designation }}" %}</span>
                   </div>
                 </div>
 
-                <div class="mt-4">
-                  <p class="text-md leading-snug text-gray-600">{% inline_text field="testimonials_content" value="{{ item.testimonials_content }}" %}</p>
+                <div class="text-lg text-[#5D636D] leading-6 ">
+                  <p class=" leading-snug text-gray-600">{% inline_text field="testimonials_content" value="{{ item.testimonials_content }}" %}</p>
                 </div>
               </div>
             </li>

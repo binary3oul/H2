@@ -3,7 +3,7 @@
 
   {% macro render_link_item(link, depth) %}
     <li>
-        <a class="text-base font-medium text-gray-800">{{ link.label }}</a>
+        <a href="{{ link.url }}" class="text-base font-medium text-gray-800">{{ link.label }}</a>
     </li>
   {% endmacro %}
 
@@ -14,7 +14,6 @@
 {% endmacro %}
 
 {# Desktop menu #}
-
 <nav aria-label="Main menu">
   <ul class="flex gap-6">
     {{ menu_items() }}
