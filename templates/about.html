@@ -7,38 +7,146 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-{% dnd_area "dnd_area"
-  label="Main section",
-  class="body-container body-container--about"
-%}
+  {# Banner #}
+  <div>
+    <div class="container mx-auto">
+      <span class="text-xs font-semibold tracking-widest leading-10 text-center text-red-500 uppercase block text-center">About Us</span>
+      <h1 class="text-5xl font-bold leading-10 text-center text-gray-800">Who We Are</h1>
 
-  {# Two column image left #}
+      <div class="flex">
+        <div class="w-1/2 flex flex-col justify-center">
+          <h2 class="text-4xl font-bold leading-10 text-gray-800">The Herd Mentality</h2>
+          <p class="text-lg leading-snug text-gray-600">We help our clients identify and connect with their target audience, and we use data-driven insights to craft effective campaigns that drive results. We understand that no two businesses are exactly alike, and we take a customized approach to every project we work on. Whether you're a small startup or a large corporation, we have the expertise and creativity to help you achieve your marketing goals. So if you're looking to build a strong, engaged following for your brand, let us help you Gather the Herd.</p>
+        </div>
 
-  {% dnd_section
-    vertical_alignment="TOP"
-  %}
-    {% dnd_module
-      path="@hubspot/linked_image",
-      img={
-        "alt": "Coworkers sitting together and smiling outside.",
-        "loading": "disabled",
-        "max_height": 449,
-        "max_width": 605,
-        "size_type": "auto_custom_max",
-        "src": get_asset_url("../images/team-image.jpg")
-      },
-      offset=0,
-      width=6
-    %}
-    {% end_dnd_module %}
-    {% dnd_module
-      path="@hubspot/rich_text",
-      html="<h1>Meet our team</h1><p>Use this page to help your visitors learn more about you. Include images so that folks will recognize you at conferences and events.</p>"
-      offset=6,
-      width=6
-    %}
-    {% end_dnd_module %}
-  {% end_dnd_section %}
+        <div class="w-1/2 flex items-center justify-center">
+          <img src={{ get_asset_url('/theherd/images/aboutgraphic.svg') }} />
+        </div>
+      </div>
+    </div>
+  </div>
 
-{% end_dnd_area %}
+  {# Award Winning Service #}
+  <div>
+    <div class="container mx-auto flex">
+      <div class="flex w-1/2 gap-8 items-center">
+        <img src={{ get_asset_url('/theherd/images/awards/telly.png') }} class="w-max h-max" alt="">
+        <img src={{ get_asset_url('/theherd/images/awards/bestbiz.png') }} class="w-max h-max" alt="">
+        <img src={{ get_asset_url('/theherd/images/awards/goldsteve.png') }} class="w-max h-max" alt="">
+      </div>
+      <div class="w-1/2">
+        <h2 class="text-4xl font-bold leading-10 text-gray-800">Award Winning Service</h2>
+        <p class="text-lg leading-snug text-gray-600">A marketing company has received awards for its website including the "Golden Web", "Platinum Content" and "Diamond Traffic" from the "International Web Standards Association" (IWSA) for design, content and website traffic</p>
+      </div>
+    </div>
+  </div>
+
+  {# Our Team #}
+  <div>
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold leading-10 text-center text-gray-800">Our Herd</h2>
+      <p class="text-lg leading-snug text-center text-gray-600">Our marketing team is a group of experts who increase conversions with our clients using their unique skills and abilities. Resulting in increased leads and sales.</p>
+      {# members #}
+      <div class="flex flex-wrap gap-8 justify-between">
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+
+        <div>
+          <div class="rounded-full overflow-hidden">
+            <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
+          </div>
+
+          <h5 class="text-lg font-bold leading-snug text-center text-gray-800">Kyle</h5>
+          <span class="text-base leading-snug text-center text-red-500 uppercase block text-center">Co-Founder, CEO</span>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock body %}
