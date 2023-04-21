@@ -1,7 +1,7 @@
 <div class="cstmcontact-sec">
   <!-- Contact Section -->
   <div class="flex">
-    <div class="w-1/2 green-gradient flex justify-end py-20 ld:py-40 lg:pr-20 xl:pr-44  lg:pl-10 xl:pl-0 relative">
+    <div class="w-1/2 green-gradient flex justify-end py-44 ld:py-40 lg:pr-20 xl:pr-44  lg:pl-10 xl:pl-0 relative">
       {% if module.image_field.src %}
       {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
       {% if module.image_field.size_type == 'auto' %}
@@ -18,7 +18,7 @@
         <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 bg-[#e76642] rounded-md text-lg font-semibold text-white">{{ module.consultation.button_text }}</a>
       </div>
     </div>
-    <div class="flex py-20 ld:py-40 lg:pl-20 lg:pl-20 xl:pl-44 lg:pr-10 xl:pr-0">
+    <div class="flex py-44 ld:py-40 lg:pl-20 lg:pl-20 xl:pl-44 lg:pr-10 xl:pr-0">
       <div class="max-w-[400px]">
         <h2 class="mb-7 text-[40px] font-bold leading-10 text-gray-800">{{ module.message.heading }}</h2>
         <p class="mb-7 text-lg leading-snug text-gray-600">{{ module.message.content }}</p>
