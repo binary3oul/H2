@@ -1,0 +1,9 @@
+.customer:hover .customer__img{
+    filter: brightness(1)
+}
+
+.customer:hover .customer__introduction{
+    bottom: 0;
+    cursor: pointer;
+    top: auto;
+}

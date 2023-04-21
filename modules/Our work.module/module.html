@@ -16,7 +16,7 @@
         {% set loadingAttr = item.background_image.loading != 'disabled' ? 'loading="{{ item.background_image.loading }}"' : '' %}
         <li
             class="
-                   before:bg-[url('{{ item.background_image.src }}')] 
+                   customer
                    before:content-['']
                    before:absolute
                    before:top-0
@@ -40,6 +40,7 @@
                    flex
                    items-center
                    justify-center
+                   overflow-hidden
                    "
             >
           {% if item.logo.src %}
@@ -49,8 +50,10 @@
           {% elif item.logo.size_type == 'auto_custom_max' %}
           {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
           {% endif %}
-          {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
-          <img src={{ item.logo.src }} class="brightness-100">
+          {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}         
+          <img src={{ item.background_image.src }} class="customer__img absolute top-0 left-0 brightness-50"/>
+          <img src={{ item.logo.src }} class="customer__mark brightness-100">
+          <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal">We increased SEO searches by %151 and improved discoverability</div>
           {% endif %}
         </li>
         {% endif %}
