@@ -20,7 +20,7 @@
           </h3>
           <ul class="text-base leading-snug text-gray-600 list-disc pl-3">
             {% for item2 in item.list %}
-            <li>{% inline_text field="list" value="{{ item2 }}" %}</li>
+            <li class="marker:text-[0.6rem]">{% inline_text field="list" value="{{ item2 }}" %}</li>
             {% endfor %}
           </ul>
           {% set href = item.link_field.url.href %}
