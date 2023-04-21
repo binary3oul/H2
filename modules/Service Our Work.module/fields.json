@@ -1,0 +1,97 @@
+[ {
+  "id" : "8e0270f5-51a0-d564-e75f-6055ec8560f5",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "cd3bdfef-03cb-aa1c-6f91-e654d89fd80e",
+  "name" : "image_1",
+  "display_width" : null,
+  "label" : "Image 1",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "7cadd2cc-1e16-2a5a-a05b-44716657fbf0",
+  "name" : "image_2",
+  "display_width" : null,
+  "label" : "Image 2",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "56a4f119-ee64-0495-8741-a4787b23822a",
+  "name" : "image_3",
+  "display_width" : null,
+  "label" : "Image 3",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "16e7fa4b-12f2-97d7-d918-a59a82581694",
+  "name" : "image_4",
+  "display_width" : null,
+  "label" : "Image 4",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "a6c20cd4-50ed-5690-e6df-7122533cd0ef",
+  "name" : "image_5",
+  "display_width" : null,
+  "label" : "Image 5",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+} ]

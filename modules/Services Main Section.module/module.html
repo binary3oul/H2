@@ -1,0 +1,61 @@
+<div class="cstm-services-page">
+  <div>
+    <div class="container mx-auto my-8">
+      <span
+            class="text-xs font-semibold tracking-widest leading-10 text-center text-red-500 uppercase block text-center"
+            >{{ module.top_heading }}</span
+        >
+      <h1
+          class="text-5xl font-bold leading-10 text-center text-gray-800 text-center"
+          >
+        {{ module.heading }}
+      </h1>
+      <div class="grid grid-cols-4 gap-8 my-16">
+        {% for item in module.list_group %}
+        <div
+             class="bg-white shadow rounded-2xl h-72 p-8 flex flex-col justify-between shadow-[0_4px_22px_rgba(36,51,71,0.13)]"
+             >
+          <h3 class="text-xl font-bold leading-snug text-gray-800 mb-4">
+            {% inline_text field="heading1" value="{{ item.heading1 }}" %}
+          </h3>
+          <ul class="text-base leading-snug text-gray-600 list-disc pl-3">
+            {% for item2 in item.list %}
+            <li>{% inline_text field="list" value="{{ item2 }}" %}</li>
+            {% endfor %}
+          </ul>
+          {% set href = item.link_field.url.href %}
+          {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             class="text-lg font-bold leading-snug underline text-gray-600 mt-4"
+             {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}
+             >
+            {% inline_text field="button_label" value="{{ item.button_label }}" %}
+          </a>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="flex justify-center space-x-8 my-20">
+        {% if module.chat_button_label %}
+        <a
+           href="{{ module.chat_link }}"
+           class="inline-flex items-center justify-center px-7 py-3 bg-red-500 rounded-md text-lg text-white"
+           >{{ module.chat_button_label }}</a
+          >
+        {% endif %}
+        {% if module.project_button_label %}
+        <a
+           href="{{ module.project_link }}"
+           class="inline-flex items-center justify-end text-lg font-bold leading-snug underline text-gray-600"
+           >{{ module.project_button_label }}</a
+          >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

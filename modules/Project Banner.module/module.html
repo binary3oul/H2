@@ -1,0 +1,80 @@
+<div class="cstmProject-Banner">
+
+  <div style="background-image: url('{{ module.main_bg_image.src }}')" class="bg-cover bg-no-repeat py-24">
+    <div class="container mx-auto flex">
+      <div class="flex-1">
+        <span class="text-xs font-semibold tracking-widest leading-10 text-red-500 uppercase">{{ module.top_heading }}</span>
+        <h1 class="text-5xl font-extrabold text-gray-800 mb-8">{{ module.heading }}</h1>
+        <p class="text-xl leading-snug text-gray-600 mb-8">{{ module.content }}</p>
+        
+        <a href="{{ module.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 bg-red-500 rounded-md text-lg text-white">{{ module.button_label }}</a>
+      </div>
+      <div class="relative w-1/2">
+        {% if module.user_group_1.image_field.src %}
+        <div class="z-2 w-80 min-h-28 bg-white shadow rounded-xl bg-opacity-40 flex p-4 pb-6 absolute top-[130px] right-[160px]">
+          <div class="rounded-full overflow-hidden w-12 h-12 mr-4">  
+            {% set sizeAttrs = 'width="{{ module.user_group_1.image_field.width }}" height="{{ module.user_group_1.image_field.height }}"' %}
+            {% if module.user_group_1.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ module.user_group_1.image_field.width }}" height="{{ module.user_group_1.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif module.user_group_1.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.user_group_1.image_field.max_width }}" height="{{ module.user_group_1.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.user_group_1.image_field.loading != 'disabled' ? 'loading="{{ module.user_group_1.image_field.loading }}"' : '' %}
+            <img  class="w-full"  src="{{ module.user_group_1.image_field.src }}" alt="{{ module.user_group_1.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xs font-bold leading-none text-gray-600">{{ module.user_group_1.user_name }}</h4>
+            <span class="text-xs leading-none text-gray-600">{{ module.user_group_1.designation }}</span>
+            <p class="text-xs leading-none text-gray-600">{{ module.user_group_1.description }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if module.user_group_2.image_field.src %}
+        <div class="z-1 w-80 min-h-28 blue-gradient shadow rounded-xl flex p-4 pb-6 absolute top-[50px] right-0">
+          <div class="rounded-full overflow-hidden w-12 h-12 mr-4">  
+            {% set sizeAttrs = 'width="{{ module.user_group_2.image_field.width }}" height="{{ module.user_group_2.image_field.height }}"' %}
+            {% if module.user_group_2.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ module.user_group_2.image_field.width }}" height="{{ module.user_group_2.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif module.user_group_2.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.user_group_2.image_field.max_width }}" height="{{ module.user_group_2.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.user_group_2.image_field.loading != 'disabled' ? 'loading="{{ module.user_group_2.image_field.loading }}"' : '' %}
+            <img class="w-full" src="{{ module.user_group_2.image_field.src }}" alt="{{ module.user_group_2.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xs font-bold leading-none text-gray-600">{{ module.user_group_2.user_name }}</h4>
+            <span class="text-xs leading-none text-gray-600">{{ module.user_group_2.designation }}</span>
+            <p class="text-xs leading-none text-gray-600">{{ module.user_group_2.description }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if module.user_group_3.image_field.src %}
+        <div class="z-1 w-80 min-h-28 blue-gradient shadow rounded-xl flex p-4 pb-6 absolute top-[218px] right-[86px]">
+          <div class="rounded-full overflow-hidden w-12 h-12 mr-4">  
+            {% set sizeAttrs = 'width="{{ module.user_group_3.image_field.width }}" height="{{ module.user_group_3.image_field.height }}"' %}
+            {% if module.user_group_3.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ module.user_group_3.image_field.width }}" height="{{ module.user_group_3.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif module.user_group_3.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.user_group_3.image_field.max_width }}" height="{{ module.user_group_3.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.user_group_3.image_field.loading != 'disabled' ? 'loading="{{ module.user_group_3.image_field.loading }}"' : '' %}
+            <img class="w-full" src="{{ module.user_group_3.image_field.src }}" alt="{{ module.user_group_3.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-xs font-bold leading-none text-gray-600">{{ module.user_group_3.user_name }}</h4>
+            <span class="text-xs leading-none text-gray-600">{{ module.user_group_3.designation }}</span>
+            <p class="text-xs leading-none text-gray-600">{{ module.user_group_3.description }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        <img src={{ get_asset_url('/theherd/images/projects/curve-arrow.png') }} class="absolute -left-6" />
+        <img src={{ get_asset_url('/theherd/images/projects/curves.png') }} class="absolute -right-6 top-4" />
+        <img src={{ get_asset_url('/theherd/images/projects/🚀.png') }} class="absolute right-11 -bottom-1" />
+      </div>
+    </div>
+  </div>
+
+</div>

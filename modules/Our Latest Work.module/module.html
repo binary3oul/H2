@@ -1,0 +1,65 @@
+<div class="cstmOLW">
+  {# Our Latest Work #}
+  <div class="py-[91px]">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold leading-10 text-gray-800">{{ module.heading }}</h2>
+      <ul class="flex flex-wrap justify-center gap-[10px] md:gap-[32px] my-14">
+        {% for item in module.work_group %}
+        {% if item.background_image.src %}
+        {% set sizeAttrs = 'width="{{ item.background_image.width }}" height="{{ item.background_image.height }}"' %}
+        {% if item.background_image.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.background_image.width }}" height="{{ item.background_image.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif item.background_image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.background_image.max_width }}" height="{{ item.background_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.background_image.loading != 'disabled' ? 'loading="{{ item.background_image.loading }}"' : '' %}
+        <li
+            class="
+                   before:bg-[url('{{ item.background_image.src }}')] 
+                   before:content-['']
+                   before:absolute
+                   before:top-0
+                   before:left-0
+                   before:w-full
+                   before:h-full
+                   before:bg-cover
+                   before:bg-center
+                   before:bg-no-repeat
+                   before:brightness-50
+                   before:z-[-1]
+                   relative
+                   xl:w-[248px]
+                   xl:h-[248px]
+                   lg:w-[214px]
+                   lg:h-[214px]
+                   md:w-[30%]
+                   md:h-[200px]
+                   w-[48%]
+                   h-[180px]
+                   flex
+                   items-center
+                   justify-center
+                   "
+            >
+          {% if item.logo.src %}
+          {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
+          {% if item.logo.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.logo.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
+          <img class="brightness-100" src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% if module.button_label %}
+      <div class="w-full flex items-center">
+        <a href="{{ module.link_field }}" class="mx-auto text-lg font-semibold text-white inline-flex items-center justify-center h-12 px-7 py-3.5 bg-gray-800 rounded-md">{{ module.button_label }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
