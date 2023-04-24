@@ -38,3 +38,31 @@ button:disabled,
   text-decoration: none;
   transition: none;
 }
+
+.primary-button {
+  background-color: #E76642;
+}
+
+.primary-button:hover {
+  background-color: #ED9A82;
+}
+
+.primary-button:active {
+  background-color: #C27D6A;
+}
+
+.secondary-button {
+  background-color: #D4F9F2;
+}
+
+.secondary-button:hover {
+  background-color: #00CCA5;
+}
+
+.link-button {
+  color: #5D636D;
+}
+
+.link-button:hover {
+  color: #E76642;
+}

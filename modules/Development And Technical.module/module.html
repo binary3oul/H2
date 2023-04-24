@@ -7,9 +7,9 @@
           <label class="text-xs font-medium text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block uppercase">{{ module.top_heading }}</label>
           <label class="md:text-3xl lg:text-4xl xl:text-5xl font-bold">{{ module.heading }}</label>
         </div>
-        <label class="text-lg leading-none text-[#5D636D]">{{ module.content }}</label>
+        <label class="text-lg leading-none link-button">{{ module.content }}</label>
         {% if module.button_text %}
-        <a href="{{ module.link_field }}" class="px-7 py-3 bg-[#D4F9F2] rounded-md text-lg font-semibold text-[#00997C] w-fit">{{ module.button_text }}</a>
+        <a href="{{ module.link_field }}" class="px-7 py-3 secondary-button rounded-md text-lg font-semibold text-[#00997C] w-fit">{{ module.button_text }}</a>
         {% endif %}
       </div>
 

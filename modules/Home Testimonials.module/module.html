@@ -3,7 +3,7 @@
     <div class="container mx-auto my-24">
       <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block uppercase">{{ module.text_label }}</span>
       <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">{{ module.heading }}</h2>
-      <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[495px] mx-auto">{{ module.content }}</p>
+      <p class="text-base md:text-lg leading-snug text-center link-button max-w-[495px] mx-auto">{{ module.content }}</p>
       <div class="testimonial-glide glide w-[730px] mx-auto mt-12">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -28,7 +28,7 @@
                   </div>
                 </div>
 
-                <div class="text-lg text-[#5D636D] leading-6 ">
+                <div class="text-lg link-button leading-6 ">
                   <p class=" leading-snug text-gray-600">{% inline_text field="testimonials_content" value="{{ item.testimonials_content }}" %}</p>
                 </div>
               </div>
