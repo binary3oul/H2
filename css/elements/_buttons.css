@@ -41,6 +41,7 @@ button:disabled,
 
 .primary-button {
   background-color: #E76642;
+  color: white;
 }
 
 .primary-button:hover {
@@ -53,10 +54,24 @@ button:disabled,
 
 .secondary-button {
   background-color: #D4F9F2;
+  color: #00997C;
 }
-
 .secondary-button:hover {
   background-color: #00CCA5;
+  color: white;
+}
+
+.black-button {
+  background-color: #243347;
+  color: white
+}
+
+.black-button:hover {
+  background-color: #667FA0;
+}
+
+.black-button:active {
+  background-color: #4B6E9D;
 }
 
 .link-button {

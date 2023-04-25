@@ -3,7 +3,7 @@
     <div class="container mx-auto flex flex-col justify-center items-center py-14 md:py-24">
      <span class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2">{{ module.top_heading }}</span>
       <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">{{ module.heading }}</h2>
-      <p class="text-base md:text-lg leading-snug text-center link-button max-w-[495px]">{{ module.content }}</p>
+      <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[495px]">{{ module.content }}</p>
       <ul class="flex flex-wrap justify-center gap-[10px] md:gap-[32px] my-14">
         {% for item in module.image_with_logo %}
         {% if item.background_image.src %}
@@ -60,7 +60,7 @@
         {% endfor %}
       </ul>
       {% if module.button_text %}
-      <a href="{{ module.button_link }}" class="cstm-btn text-white font-semibold text-lg px-7 py-3 rounded-md primary-button">{{ module.button_text }}</a>
+      <a href="{{ module.button_link }}" class="cstm-btn text-white font-semibold text-lg px-7 py-3 rounded-md button primary-button">{{ module.button_text }}</a>
       {% endif %}
     </div>
   </div>
