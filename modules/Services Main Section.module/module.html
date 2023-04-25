@@ -18,9 +18,9 @@
           <h3 class="text-xl font-bold leading-snug text-gray-800 mb-4">
             {% inline_text field="heading1" value="{{ item.heading1 }}" %}
           </h3>
-          <ul class="text-base leading-snug text-gray-600 list-disc pl-3">
+          <ul class="text-base leading-snug text-gray-600 list-none">
             {% for item2 in item.list %}
-            <li class="marker:text-[0.6rem]">{% inline_text field="list" value="{{ item2 }}" %}</li>
+            <li class="flex before:text-base before:content-['•'] before:pr-2 before:-translate-y-px">{% inline_text field="list" value="{{ item2 }}" %}</li>
             {% endfor %}
           </ul>
           {% set href = item.link_field.url.href %}
