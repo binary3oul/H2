@@ -1,9 +1,9 @@
 .customer:hover .customer__img{
-    filter: brightness(1)
+    filter: brightness(1);
+    transition: .2s;
 }
 
 .customer:hover .customer__introduction{
-    bottom: 0;
-    cursor: pointer;
-    top: auto;
+    transform: translateY(-124px);
+    transition: .2s;
 }
