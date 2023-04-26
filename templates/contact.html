@@ -7,14 +7,27 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-{% dnd_area "dnd_area"
-  label="Main section",
-  class="body-container body-container--contact"
-%}
 
-  {# Cards #}
+<div class="flex relative">
+  <img class="absolute top-48 left-[calc(50%-54px)]" src="{{ get_asset_url('/theherd/images/herd-dog.png') }}">
+  <div class="flex-1 green-gradient flex justify-end py-44 ld:py-40 lg:pr-20 xl:pr-44  lg:pl-10 xl:pl-0">
+    <div class="max-w-[400px]">
+      <h2 class="mb-7 text-[40px] font-bold leading-10 text-gray-800">Book a Consultation</h2>
+      <p class="mb-7 text-lg leading-snug text-gray-600">
+        Creating an effective digital marketing campaign requires a clear strategy and significant effort.
+      </p>
+      <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg font-semibold">Book now!</a>
+    </div>
+  </div>
+  <div class="flex-1 py-44 ld:py-40 lg:pl-20 lg:pl-20 xl:pl-44 lg:pr-10 xl:pr-0">
+    <div class="max-w-[400px]">
+      <h2 class="mb-7 text-[40px] font-bold leading-10 text-gray-800">Send a message</h2>
+      <p class="mb-7 text-lg leading-snug text-gray-600">
+        Creating an effective digital marketing campaign requires a clear strategy and significant effort.
+      </p>
+      <a href="{{ module.message.link_field }}" class="px-7 py-3 button secondary-button rounded-md text-lg font-semibold w-fit">Contact</a>
+    </div>
+  </div>
+</div>
 
-  {% include_dnd_partial path="../sections/cards.html" %}
-
-{% end_dnd_area %}
 {% endblock body %}
