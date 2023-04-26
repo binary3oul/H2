@@ -1,0 +1,45 @@
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+	<div class="container-fluid w-full bg-[url({{ get_asset_url('/theherd/images/industires-banner.png') }})] bg-cover bg-no-repeat">
+    <div class="py-36 mx-auto w-5/12 text-center">
+			<span class="text-xs font-semibold tracking-widest leading-10 text-center text-[#E76642] tracking-[.2em] uppercase block">Industires</span>
+			<h1 class="text-5xl font-bold leading-10 text-center text-neutral-800">Our Clients & Industries</h1>
+			<p class="text-lg leading-snug text-[#5D636D] mt-10">Inbound and e-commerce marketing, web design, paid media, PR, sales enablement, creative, and video marketing—we’ve got you covered.</p>
+    </div>
+  </div>
+	<div class="container my-12">
+		<div class="mt-24 mb-16">
+			<div class="relative inline-flex items-center">
+				<select class="text-xl font-semibold text-[#E76642] pr-4 hover:border-gray-400 focus:outline-none appearance-none">
+					<option>Types of Service</option>
+					<option>A-Z</option>
+					<option>Z-A</option>
+				</select>
+				<svg viewBox="0 0 21 10.5" width="21" height="14">
+					<path d="M1 3 L10.5 12 L20 3" stroke="#E76642" stroke-width="1" fill="none"/>
+				</svg>
+			</div>
+			<div class="relative inline-flex items-center ml-5">
+				<select class="text-xl font-bold text-[#E76642] px-4 hover:border-gray-400 focus:outline-none appearance-none">
+					<option>Industry</option>
+					<option>A-Z</option>
+					<option>Z-A</option>
+				</select>
+				<svg viewBox="0 0 21 10.5" width="21" height="14">
+					<path d="M1 3 L10.5 12 L20 3" stroke="#E76642" stroke-width="1" fill="none"/>
+				</svg>
+			</div>
+		</div>
+		<div class="flex gap-x-[110px]">
+			<div class="flex-1">
+				<h1 class="text-[#243347] text-5xl font-bold">Healthcare Impact</h1>
+				<p class="my-6 text-[#5D636D] font-normal leading-6">We help our clients identify and connect with their target audience, and we use data-driven insights to craft effective campaigns that drive results. We understand that no two businesses are exactly alike, and we take a customized approach to every project we work on. Whether you're a small startup or a large corporation, we have the expertise and creativity to help you achieve your marketing goals. So if you're looking to build a strong, engaged following for your brand, let us help you Gather the Herd.</p>
+			</div>
+			<div class="flex-1 relative">
+				<img src={{ get_asset_url('/theherd/images/key-animation.png') }} alt="Key Visual Animation"/>
+				<label class="absolute top-[143px] left-[175px] w-[137px] font-medium text-2xl text-center leading-10">Key Visual/ Animation</label>
+			</div>
+		</div>
+	</div>
+ {% endblock body %}
