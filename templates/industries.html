@@ -10,25 +10,51 @@
   </div>
 	<div class="container my-12">
 		<div class="mt-24 mb-16">
-			<div class="relative inline-flex items-center">
-				<select class="text-xl font-semibold text-[#E76642] pr-4 hover:border-gray-400 focus:outline-none appearance-none">
-					<option>Types of Service</option>
-					<option>A-Z</option>
-					<option>Z-A</option>
-				</select>
-				<svg viewBox="0 0 21 10.5" width="21" height="14">
-					<path d="M1 3 L10.5 12 L20 3" stroke="#E76642" stroke-width="1" fill="none"/>
-				</svg>
+			<div class="inline-flex">
+				<button data-dropdown-toggle="dropdown" class="text-xl font-semibold text-[#E76642] pr-4 hover:border-gray-400 focus:outline-none appearance-none flex items-center" type="button">
+					Types of Service 
+					<img class="pl-5 pt-1" src = "{{ get_asset_url('/theherd/images/icons/dropdown.png') }}" alt = "dropdown icon"/>
+				</button>
+				<!-- Dropdown menu -->
+				<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+					<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+						<li>
+							<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 1</a>
+						</li>
+						<li>
+							<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 2</a>
+						</li>
+						<li>
+							<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 3</a>
+						</li>
+						<li>
+							<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 4</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="relative inline-flex items-center ml-5">
-				<select class="text-xl font-bold text-[#E76642] px-4 hover:border-gray-400 focus:outline-none appearance-none">
-					<option>Industry</option>
-					<option>A-Z</option>
-					<option>Z-A</option>
-				</select>
-				<svg viewBox="0 0 21 10.5" width="21" height="14">
-					<path d="M1 3 L10.5 12 L20 3" stroke="#E76642" stroke-width="1" fill="none"/>
-				</svg>
+			<div class="inline-flex ml-12">
+				<button data-dropdown-toggle="dropdown" class="text-xl font-semibold text-[#E76642] pr-4 hover:border-gray-400 focus:outline-none appearance-none flex items-center" type="button">
+					Industry
+					<img class="pl-5 pt-1" src = "{{ get_asset_url('/theherd/images/icons/dropdown.png') }}" alt = "dropdown icon"/>
+				</button>
+				<!-- Dropdown menu -->
+				<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+					<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+					<li>
+						<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 1</a>
+					</li>
+					<li>
+						<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 2</a>
+					</li>
+					<li>
+						<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 3</a>
+					</li>
+					<li>
+						<a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 4</a>
+					</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="flex gap-x-[110px]">
