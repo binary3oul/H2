@@ -1,0 +1,57 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact
+  screenshotPath: ../images/template-previews/contact.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+<div class="container">
+  <div class="md:w-[48%] mt-6">
+    <span class="text-xs font-semibold leading-10 text-red-500 uppercase block tracking-[.2em]">contact</span>
+    <h1 class="text-5xl font-bold leading-10 text-[#243347] mb-8">
+      Get In Touch
+    </h1>
+    <p class="text-[#5D636D] font-normal">Have a question for The Herd? Fill out the form below and we’ll be in touch within 24 hours.</p>
+  </div>
+  
+  <div class="md:w-4/6 mt-10 mb-24">
+    <form>
+      <div class="grid gap-6 mb-6 md:grid-cols-2">
+          <div>
+            <input type="text" id="first_name" class="bg-[#F6F8FF] border border-gray-300 text-gray-900 !text-lg focus:ring-blue-500 focus:border-blue-500 block w-full !p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name" required>
+          </div>
+          <div>
+            <input type="text" id="last_name" class="bg-[#F6F8FF] border border-gray-300 text-gray-900 !text-lg focus:ring-blue-500 focus:border-blue-500 block w-full !p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Last Name" required>
+          </div>
+          <div>
+            <input type="email" id="email" class="bg-[#F6F8FF] border border-gray-300 text-gray-900 !text-lg focus:ring-blue-500 focus:border-blue-500 block w-full !p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required>
+          </div>  
+          <div>
+            <input type="tel" id="phone" class="bg-[#F6F8FF] border border-gray-300 text-gray-900 !text-lg focus:ring-blue-500 focus:border-blue-500 block w-full !p-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+          </div>
+            
+          <div class="relative">
+            <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-7 right-6 pointer-events-none">
+              <path d="M1 1L9.5 9.5L18 1" stroke="#5D636D"/>
+            </svg>
+            <select id="how-hear" class="bg-[#F6F8FF] border border-gray-300 text-gray-900 !text-lg focus:ring-blue-500 focus:border-blue-500 block w-full !pl-5 !pt-5 !pb-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 appearance-none" required>
+              <option value="" disabled selected hidden>How did you hear about us?</option>
+              <option value="opt1">I saw an advertisement</option>
+              <option value="opt2">I found you through an online search</option>
+              <option value="opt3">I read about you in the media</option>
+              <option value="opt4">I saw one of your signs or banners</option>
+            </select>
+          </div>
+      </div>
+      <div class="mb-24 mt-12">
+        <textarea id="message" rows="4" class="block p-5 w-full text-lg text-gray-900 bg-[#F6F8FF] border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 after:pr-12 h-[250px]" placeholder="Additional comments"></textarea>
+      </div>
+      <button class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg">Send message!</button>
+    </form>
+  </div>
+</div>
+
+{% endblock body %}
