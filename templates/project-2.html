@@ -1,0 +1,43 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Project 2
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+    <div>
+        <div class="container flex items-center gap-x-20 my-16">
+            <div class="w-3/5">
+                <span class="text-xs font-semibold leading-10 text-[#E76642] tracking-[.2em] uppercase block">Procacci Brothers</span>
+                <h1 class="text-5xl font-bold leading-10 text-neutral-800">Estrella Naciente</h1>
+                <p class="text-lg leading-snug text-[#5D636D] my-8">The “Estrella Naciente” Scholarship fund is dedicated to providing educational opportunities for young leaders in the Hispanic community. We created a video to detail these students’ struggles and highlight the company that is rewarding their hard work.
+                </p>
+            </div>
+            <div class="w-2/5">
+                <img src={{ get_asset_url('/theherd/images/ourwork/procacci-bg-1.png') }} class="w-full rounded-2xl"/>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="flex-1 text-center bg-[#E76224] pt-9 pb-7">
+                <h1 class="text-white font-bold text-4xl mb-2">150%</h1>
+                <label class="text-white text-lg font-normal">Growth in site traffic and engagement</label>
+            </div>
+            <div class="flex-1 text-center bg-[#D65A18] pt-9 pb-7">
+                <h1 class="text-white font-bold text-4xl mb-2">150%</h1>
+                <label class="text-white text-lg font-normal">Growth in site traffic and engagement</label>
+            </div>
+            <div class="flex-1 text-center bg-[#BD4D12] pt-9 pb-7">
+                <h1 class="text-white font-bold text-4xl mb-2">150%</h1>
+                <label class="text-white text-lg font-normal">Growth in site traffic and engagement</label>
+            </div>
+        </div>
+    </div>
+    <div class="container flex flex-col gap-y-24 my-24">
+        <h2 class="text-center text-[#252525] text-3xl font-bold">Development</h2>
+        <img src={{ get_asset_url('/theherd/images/projects/development.png') }} />
+        <div class="text-center">
+            <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button secondary-button rounded-md text-lg font-semibold">View The Full Website</a>
+        </div>
+    </div>
+{% endblock body %}
