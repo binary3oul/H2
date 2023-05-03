@@ -1,0 +1,119 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Resources
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+    <div class="container mx-auto my-14">
+        <div>
+            <span class="text-xs font-semibold leading-10 text-center text-[#E76642] uppercase block tracking-[.2em]">Service</span>
+            <h1 class="text-5xl font-bold leading-10 text-center text-[#252525]">Website Optimization</h1>
+        </div>
+        <div class="flex items-center my-32">
+            <div class="flex flex-col space-y-6 w-[48%]">
+                <h2 class="text-4xl font-bold leading-snug text-[#252525]">Conversion Rate Optimization</h2>
+                <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
+                    We offer a website conversion rate service that helps businesses to increase the number of website visitors who take a desired action, such as making a purchase, filling out a form, or signing up for a newsletter. The team at The Herd uses a combination of data analysis, user testing, and design best practices to identify areas of improvement on a business's website. They then create a customized conversion optimization plan that addresses those areas, increasing the chances of visitors taking the desired action. The website conversion rate service includes continuous monitoring and optimization to ensure that the website continues to perform at its best. Whether a business wants to improve its website's conversion rate, increase sales, or generate leads, The Herd's website conversion rate service provides a comprehensive solution that delivers measurable results.
+                </p>
+            </div>
+            <div class="w-[52%]">
+                <img src={{ get_asset_url('/theherd/images/single-service/female-web-developer-working-on-project.png') }} class="w-full" />
+            </div>
+        </div>
+        <div class="flex items-center">
+            <div class="flex-1">
+                <img src={{ get_asset_url('/theherd/images/single-service/male-web-developer-adding-design-elements.png') }} />
+            </div>
+            <div class="flex flex-1 flex-col space-y-6">
+                <h2 class="text-4xl font-bold leading-snug text-[#252525]">A/B Testing</h2>
+                <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
+                    Our A/B Testing service helps clients optimize their marketing campaigns and improve their overall performance. With A/B Testing, clients can test different variations of their ads, landing pages, and website elements to determine which version performs best. The Herd's A/B Testing service includes the design and implementation of the test, data analysis, and reporting of results. The results of these tests can provide valuable insights into customer behavior and preferences, which can inform future marketing decisions and lead to higher conversion rates and ROI. The A/B Testing service offered by The Herd is designed to be flexible and customizable, allowing businesses to test any aspect of their marketing campaigns. Whether a business is looking to improve its website's user experience, increase engagement, or drive sales, The Herd's A/B Testing service provides a comprehensive approach to data-driven optimization.
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center mt-20">
+            <div class="flex flex-1 flex-col space-y-6">
+                <h2 class="text-4xl font-bold leading-snug text-[#252525]">Hosting, Backups, Recovery</h2>
+                <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
+                    We offer Hosting, Back-ups, and Recovery services that provide clients with the peace of mind that their website and data are safe and secure. With their hosting service, clients can expect reliable, fast, and secure website hosting that is optimized for performance. The Herd's backup and recovery services ensure that clients can restore their website and data in the event of any issues or downtime. We use the latest technologies and strategies to create and manage backups, ensuring that businesses are protected against data loss or corruption. With our hosting, backups, and recovery services, clients can focus on their core operations while we handle the technical details.
+                </p>
+            </div>
+            <div class="flex-1">
+                <img src={{ get_asset_url('/theherd/images/single-service/male-web-developer-doing-research-on-development.png') }} />
+            </div>
+        </div>
+        <div class="flex items-center">
+            <div class="flex-1">
+                <img src={{ get_asset_url('/theherd/images/single-service/male-web-developer-working-on-website-code.png') }} />
+            </div>
+            <div class="flex flex-1 flex-col space-y-6">
+                <h2 class="text-4xl font-bold leading-snug text-[#252525]">On-going Maintenance</h2>
+                <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
+                    With regular website maintenance, clients can avoid costly downtime, lost traffic, and security threats. The Herd's maintenance services include software updates, security patches, and performance monitoring. The team also provides content updates, such as adding new pages, images, and blog posts, as well as addressing any technical issues that may arise. 
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-16">
+            <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg font-semibold">Let's chat!</a>
+        </div>
+    </div>
+    <div class="bg-neutral-50 pt-16 pb-24">
+        <div class="container">
+            <h2 class="text-4xl font-bold leading-10 text-[#252525] text-center mb-16">Related Projects</h2>
+            <div class="grid grid-cols-4 gap-8">
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+                <div class="relative max-w-64 max-h-64 project overflow-hidden">
+                    <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
+                    <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
+                    <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .project:hover .project__img{
+            filter: brightness(.8);
+            transition: .2s;
+        }
+        .project:hover .project__introduction{
+            transform: translateY(-124px);
+            transition: .2s;
+        }
+    </style>
+{% endblock body %}
