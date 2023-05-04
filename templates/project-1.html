@@ -44,7 +44,7 @@
                 </div>
                 <div class="flex-1 relative">
                     <img src={{ get_asset_url('/theherd/images/projects/challenge.png') }} class="w-full" />
-                    <img src={{ get_asset_url('/theherd/images/projects/play.png') }} class="absolute left-[37%] top-[31%]" />
+                    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"><img src={{ get_asset_url('/theherd/images/projects/play.png') }} class="absolute left-[37%] top-[31%]" /></button>
                 </div>
             </div>
             <div class="flex items-center gap-x-12">
@@ -117,6 +117,19 @@
                     <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
                     <img src={{ get_asset_url('/theherd/images/ourwork/keller-williams-logo.png') }} class="absolute left-[17%] top-[35%] brightness-100"/>
                     <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full">
+            <div class="relative bg-white rounded-lg shadow">
+                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="popup-modal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-8 pt-16 text-center">
+                    <iframe id="cartoonVideo" class="embed-responsive-item" width="610" height="350" src="//www.youtube.com/watch?v=kjIS3JnrE9E" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
