@@ -5,6 +5,8 @@
 :root {
   --column-gap: 2.13%;
   --column-width-multiplier: 8.333;
+  --slider-width: 1120px;
+  --slider-height: 375px;
 }
 
 /* Mobile layout */
