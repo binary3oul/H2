@@ -20,7 +20,7 @@
           </h3>
           <ul class="text-base leading-snug text-gray-600 list-none">
             {% for item2 in item.list %}
-            <li class="flex before:text-base before:content-['•'] before:pr-2 before:-translate-y-px">{% inline_text field="list" value="{{ item2 }}" %}</li>
+            <li class="flex before:text-base before:content-['•'] before:pr-2 before:-translate-y-[3px]">{% inline_text field="list" value="{{ item2 }}" %}</li>
             {% endfor %}
           </ul>
           {% set href = item.link_field.url.href %}
