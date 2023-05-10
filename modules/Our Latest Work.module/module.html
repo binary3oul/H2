@@ -2,7 +2,55 @@
   {# Our Latest Work #}
   <div class="py-[91px]">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold leading-10 text-gray-800">{{ module.heading }}</h2>
+      <h2 class="text-4xl font-bold leading-10 text-[#243347]">{{ module.heading }}</h2>
+      <div class="mt-8 mb-24">
+        <div class="inline-flex">
+          <button data-dropdown-toggle="dropdown" class="text-lg font-semibold text-[#E76642] hover:border-gray-400 focus:outline-none appearance-none flex items-center" type="button">
+            Types of Service 
+            <img class="pl-4" src="{{ get_asset_url('/theherd/images/icons/dropdown.svg') }}" alt = "dropdown icon"/>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 1</a>
+              </li>
+              <li>
+                <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 2</a>
+              </li>
+              <li>
+                <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 3</a>
+              </li>
+              <li>
+                <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inline-flex ml-12">
+          <button data-dropdown-toggle="dropdown" class="text-lg font-semibold text-[#E76642] hover:border-gray-400 focus:outline-none appearance-none flex items-center" type="button">
+            Industry
+            <img class="pl-4" src = {{ get_asset_url('/theherd/images/icons/dropdown.svg') }} alt = "dropdown icon"/>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 1</a>
+            </li>
+            <li>
+              <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 2</a>
+            </li>
+            <li>
+              <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 3</a>
+            </li>
+            <li>
+              <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item 4</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <ul class="flex flex-wrap justify-center gap-[10px] md:gap-[32px] my-14">
         {% for item in module.work_group %}
         {% if item.background_image.src %}
