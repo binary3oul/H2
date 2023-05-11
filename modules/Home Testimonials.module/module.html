@@ -22,9 +22,9 @@
                     {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
                     <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
                   </div>
-                  <div>
+                  <div class="flex flex-col justify-center gap-2">
                     <h5 class="text-lg font-bold leading-none">{% inline_text field="user_name" value="{{ item.user_name }}" %}</h5>
-                    <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2 w-full block">{% inline_text field="designation" value="{{ item.designation }}" %}</span>
+                    <span class="text-xs font-medium text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block">{% inline_text field="designation" value="{{ item.designation }}" %}</span>
                   </div>
                 </div>
 
