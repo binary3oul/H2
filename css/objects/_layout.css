@@ -20,7 +20,7 @@
 {% for span_num in range(1, total_columns_count + 1) %}
   {{ ".row-fluid .span" ~ span_num }}{{ loop.last ? null : "," }}
 {%- endfor -%} {
-  min-height: 1px;
+  /* min-height: 1px; */
   width: 100%;
 }
 

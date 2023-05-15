@@ -1,18 +1,18 @@
 <div class="cstm-homeTestimonials">
   <div>
-    <div class="container mx-auto my-24 flex flex-col">
-      <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block uppercase">{{ module.text_label }}</span>
+    <div class="container mx-0 md:mx-auto pt-10 pb-12 md:py-24 flex flex-col bg-[#F6F8FF] md:bg-white">
+      <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.2em] w-full block uppercase">{{ module.text_label }}</span>
       <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">{{ module.heading }}</h2>
       <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[495px] mx-auto">{{ module.content }}</p>
-      <div class="testimonial-glide glide w-[730px] mx-auto mt-16 mb-28">
-        <div class="glide__track" data-glide-el="track">
+      <div class="testimonial-glide glide mx-auto mt-16 mb-24">
+        <div class="glide__track md:w-[730px] w-4/5 mx-auto" data-glide-el="track">
           <ul class="glide__slides">
             {% for item in module.testimonials_group %}
             {% if item.logo.src %}
             <li class="glide__slide p-4"> 
-              <div class="shadow-[0px_0px_28px_rgba(36,51,71,0.06)] rounded-2xl flex flex-col p-8 bg-white	">
-                <div class="flex">
-                  <div class="mr-3">
+              <div class="shadow-[0px_0px_28px_rgba(36,51,71,0.06)] rounded-2xl flex flex-col p-8 bg-white gap-10 md:gap-1">
+                <div class="flex flex-col md:flex-row gap-2">
+                  <div class="mr-3 mb-1 md:mb-0">
                     {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
                     {% if item.logo.size_type == 'auto' %}
                     {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}" style="max-width: 100%; height: auto;"' %}
@@ -20,29 +20,28 @@
                     {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
                     {% endif %}
                     {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
-                    <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }} class="w-[70%] md:w-full mb-2 md:mb-0">
+                    <img src={{ get_asset_url('/theherd/images/home/testimonial-photo.png') }} class="block md:hidden w-[40px] rounded-[50%]"/>
                   </div>
                   <div class="flex flex-col justify-center gap-2">
-                    <h5 class="text-lg font-bold leading-none">{% inline_text field="user_name" value="{{ item.user_name }}" %}</h5>
-                    <span class="text-xs font-medium text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block">{% inline_text field="designation" value="{{ item.designation }}" %}</span>
+                    <h5 class="text-lg font-bold text-[#5D636D] md:text-black">{% inline_text field="user_name" value="{{ item.user_name }}" %}</h5>
+                    <span class="md:text-xs text-lg font-normal md:font-medium text-[#5D636D] md:text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block">{% inline_text field="designation" value="{{ item.designation }}" %}</span>
                   </div>
                 </div>
-
-                <div class="text-lg text-[#5D636D] leading-6 ">
+                <div class="text-lg text-[#5D636D] leading-6">
                   <p class=" leading-snug text-gray-600">{% inline_text field="testimonials_content" value="{{ item.testimonials_content }}" %}</p>
                 </div>
               </div>
             </li>
             {% endif %}
-            
             {% endfor %}
           </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left -left-[50%] shadow-none hidden xl:block" data-glide-dir="<">
+          <button class="border-none glide__arrow glide__arrow--left top-[50%] left-0 shadow-none" data-glide-dir="<">
             <img src={{ get_asset_url('/theherd/images/icons/arrow-left.png') }} />
           </button>
-          <button class="glide__arrow glide__arrow--right -right-[50%] shadow-none hidden xl:block" data-glide-dir=">">
+          <button class="border-none glide__arrow glide__arrow--right top-[50%] right-0 shadow-none" data-glide-dir=">">
             <img src={{ get_asset_url('/theherd/images/icons/arrow-right.png') }} />
           </button>
         </div>

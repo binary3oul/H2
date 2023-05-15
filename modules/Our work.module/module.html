@@ -1,8 +1,9 @@
 <div class="home-our-work">     
   <div>
-    <div class="container mx-auto flex flex-col justify-center items-center py-14 md:py-24">
-     <span class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2">{{ module.top_heading }}</span>
-      <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">{{ module.heading }}</h2>
+    <div class="container mx-auto flex flex-col justify-center items-center py-14 md:py-24 bg-[#F6F8FF] md:bg-white">
+      <span class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.2em] mb-2 hidden md:block">{{ module.top_heading }}</span>
+      <span class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.2em] mb-2 block md:hidden">WELCOME TO THE HERD</span>
+      <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">Crafted For Results</h2>
       <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[495px]">{{ module.content }}</p>
       <ul class="flex flex-wrap justify-center gap-[10px] md:gap-[32px] my-14">
         {% for item in module.image_with_logo %}
@@ -35,8 +36,8 @@
                    lg:h-[214px]
                    md:w-[30%]
                    md:h-[200px]
-                   w-[48%]
-                   h-[180px]
+                   w-[360px]
+                   h-[360px]
                    flex
                    items-center
                    justify-center
@@ -51,9 +52,9 @@
           {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
           {% endif %}
           {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}         
-          <img src={{ item.background_image.src }} class="customer__img absolute top-0 left-0 brightness-50"/>
+          <img src={{ item.background_image.src }} class="customer__img absolute top-0 left-0 brightness-50 w-full"/>
           <img src={{ item.logo.src }} class="customer__mark brightness-100">
-          <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg top-[248px] font-normal">We increased SEO searches by %151 and improved discoverability</div>
+          <div class="customer__introduction absolute w-100 h-50 bg-neutral-50 p-6 text-lg md:top-[248px] top-[360px] font-normal">We increased SEO searches by %151 and improved discoverability</div>
           {% endif %}
         </li>
         {% endif %}

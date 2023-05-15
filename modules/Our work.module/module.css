@@ -7,3 +7,10 @@
     transform: translateY(-124px);
     transition: .2s;
 }
+
+@media screen and (max-width: 768px) {
+    .customer:hover .customer__introduction{
+        transform: translateY(-104px);
+        transition: .2s;
+    }
+}

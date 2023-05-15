@@ -3,7 +3,7 @@
 
   {% macro render_link_item(link, depth) %}
     <li>
-        <a href="{{ link.url }}" class="text-base font-medium text-gray-800">{{ link.label }}</a>
+      <a href="{{ link.url }}" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#E76642] md:p-0">{{ link.label }}</a>
     </li>
   {% endmacro %}
 
@@ -13,17 +13,9 @@
 
 {% endmacro %}
 
-{# Desktop menu #}
-<nav aria-label="Main menu">
-  <ul class="flex gap-6">
-    {{ menu_items() }}
-  </ul>
-</nav>
-
-{# Mobile menu #}
-
-<nav class="menu menu--mobile" aria-label="Main menu">
-  <ul class="menu__wrapper no-list">
-    {{ menu_items() }}
-  </ul>
-</nav>
+<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+  {{ menu_items() }}
+  <li class="list-item md:hidden">
+    <a href="{{ link.url }}" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#E76642] md:p-0">Contact</a>
+  </li>
+</ul>

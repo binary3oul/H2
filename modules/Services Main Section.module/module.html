@@ -1,21 +1,21 @@
 <div class="cstm-services-page">
   <div>
-    <div class="container mx-auto my-8">
+    <div class="container px-10 md:px-auto my-8">
       <span
-            class="text-xs font-semibold tracking-widest leading-10 text-center text-red-500 uppercase block text-center"
+            class="text-xs font-semibold tracking-[.2em] md:tracking-widest leading-10 text-center text-[#E76642] uppercase block text-center"
             >{{ module.top_heading }}</span
         >
       <h1
-          class="text-5xl font-bold leading-10 text-center text-gray-800 text-center"
+          class="text-4xl md:text-5xl font-bold leading-10 text-center text-[#243347] md:text-[#252525] text-center"
           >
         {{ module.heading }}
       </h1>
-      <div class="grid grid-cols-4 gap-8 my-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 my-16">
         {% for item in module.list_group %}
         <div
-             class="bg-white shadow rounded-2xl h-72 p-8 flex flex-col justify-between shadow-[0_4px_22px_rgba(36,51,71,0.13)]"
+             class="bg-white shadow rounded-none md:rounded-2xl h-auto p-8 flex flex-col justify-between shadow-[0_4px_22px_rgba(36,51,71,0.13)]"
              >
-          <h3 class="text-xl font-bold leading-snug text-gray-800 mb-4">
+          <h3 class="text-xl font-bold leading-snug text-[#243347] md:text-[#252525] mb-4">
             {% inline_text field="heading1" value="{{ item.heading1 }}" %}
           </h3>
           <ul class="text-base leading-snug text-gray-600 list-none">
@@ -51,7 +51,7 @@
         {% if module.project_button_label %}
         <a
            href="{{ module.project_link }}"
-           class="inline-flex items-center justify-end text-lg font-bold leading-snug underline link-button"
+           class="md:inline-flex items-center justify-end text-lg font-bold leading-snug underline link-button hidden"
            >{{ module.project_button_label }}</a
           >
         {% endif %}

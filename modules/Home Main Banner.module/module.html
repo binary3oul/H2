@@ -1,5 +1,7 @@
 <div class="">
   <div class="home-main-banner
+  hidden
+  md:block
   before:bg-[url(https://24467831.fs1.hubspotusercontent-na1.net/hubfs/24467831/banner-shap.png)]
   before:content-['']
   before:absolute
@@ -69,4 +71,17 @@
       </div>
     </div>
   </div>
+  <div class="block md:hidden text-center container px-6">
+    <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2 uppercase">Welcome</span>
+    <h2 class="heading not-italic font-extrabold text-5xl leading-[50px] md:text-[60px] md:leading-[65px] lg:text-[75px] lg:leading-[72px] text-[#243347] mt-5 mb-3">Think. Make. Solve.</h2>
+    <p class="text-sm leading-6 text-[#5D636D]">The Herd is a Digital Marketing & Creative Agency. Let us help you stand out and achieve your goals.</p>
+    <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg font-semibold my-8">Let's chat!</a>
+    <img src={{ get_asset_url('/theherd/images/home/banner-bg.png') }} class="w-full" />
+  </div>
 </div>
+<style>
+  .cell_16812967870222-background-image{
+    padding-top: 36px !important;
+    padding-bottom: 60px !important
+  }
+</style>

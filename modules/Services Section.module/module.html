@@ -1,6 +1,6 @@
 <div class="cstm-home-service">
   <!-- Services Section -->
-  <div class="container flex flex-col items-center justify-center space-y-6 py-20">
+  <div class="container flex-col items-center justify-center space-y-6 py-20 hidden md:flex">
     <div class="flex flex-col text-center space-y-4">
       <label class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block uppercase">{{ module.top_heading }}</label>
       <label class="text-5xl font-bold">{{ module.heading }}</label>
@@ -48,5 +48,36 @@
     {% if module.button_text  %}
     <a href="{{ module.link_field }}" class="cstm-btn text-white font-semibold text-lg px-7 py-3 rounded-md button primary-button">{{ module.button_text }}</a>
     {% endif %}
+  </div>
+  <div class="container flex flex-col pt-14 md:hidden">
+    <span class="text-xs font-medium leading-6 md:leading-10 text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] w-full block mb-3 uppercase">Welcome to the herd</span>
+    <h2 class="text-3xl md:text-5xl font-bold leading-10 text-[#243347] mb-10">Our solutions</h2>
+    <div>
+      <input type="radio" name="tabs" id="creative-radio" checked />
+      <label for="creative-radio" id="creative-label" class="inline-block px-2 border-b-[6px] border-transparent rounded-t-lg text-gray-600 font-bold text-lg mr-8 leading-4">Creative</label>
+      <input type="radio" name="tabs" id="marketing-radio" />
+      <label for="marketing-radio" id="marketing-label" class="inline-block px-2 border-b-[6px] border-transparent rounded-t-lg text-gray-600 font-bold text-lg leading-4">Marketing</label>
+      <div class="tab creative-content flex flex-col mx-2">
+        <div class="mt-7 pb-28 border-b-2 border-[#e1e1e1]">
+          <h2 class="font-extrabold text-2xl text-[#243347]">Videography & Photography</h2>
+          <p class="font-medium text-sm text-[#243347] mt-2 mb-4">"Marketing agency providing professional film & photography for commercials, product shoots, events and more. </p>
+          <a class="font-bold text-lg leading-snug link-button underline">Learn More</a>
+          <img src={{ get_asset_url('/theherd/images/services.png') }} class="mt-28 translate-x-4 sm:translate-x-24" />
+        </div>
+        <div class="mt-7 pb-28 border-b-2 border-[#e1e1e1]">
+          <h2 class="font-extrabold text-2xl text-[#243347]">Videography & Photography</h2>
+          <p class="font-medium text-sm text-[#243347] mt-2 mb-4">"Marketing agency providing professional film & photography for commercials, product shoots, events and more. </p>
+          <a class="font-bold text-lg leading-snug link-button underline">Learn More</a>
+          <img src={{ get_asset_url('/theherd/images/services.png') }} class="mt-28 translate-x-4 sm:translate-x-24" />
+        </div>
+        <div class="mt-7 pb-8">
+          <h2 class="font-extrabold text-2xl text-[#243347]">Videography & Photography</h2>
+          <p class="font-medium text-sm text-[#243347] mt-2 mb-4">"Marketing agency providing professional film & photography for commercials, product shoots, events and more. </p>
+          <a class="font-bold text-lg leading-snug link-button underline">Learn More</a>
+          <img src={{ get_asset_url('/theherd/images/services.png') }} class="mt-28 translate-x-4 sm:translate-x-24" />
+        </div>
+      </div>
+      <div class="tab marketing-content">Tab2 Contents</div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,13 @@
+input { display: none; }
+input + label { display: inline-block;}
+
+input ~ .tab { display: none }
+#creative-radio:checked ~ .creative-content,
+#marketing-radio:checked ~ .marketing-content{ 
+    display: block; 
+}
+
+#creative-radio:checked ~ #creative-label,
+#marketing-radio:checked ~ #marketing-label{
+    border-color: #E76642;
+}

@@ -1,28 +1,28 @@
 <div class="cstm-marketing-img">
   <div class="bg-[#FAFBFF] py-14 md:py-24">
     <div class="flex flex-col items-center container mx-auto">
-    <span class="text-sm font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2">{{ module.top_heading }}</span>
-    <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800 mb-4 md:mb-8">{{ module.heading }}</h2>
-    <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[591px]">{{ module.content }}</p>
-    <ul class="flex gap-2 md:gap-6 mt-14">
-      {% for item in module.icon_group %}
-      {% if item.icon.src %}
-      <li class="flex items-center gap-2 flex-wrap md:flex-nowrap justify-center">
-        <div class="w-16 h-16  flex items-center justify-center p-2 bg-white shadow-[0px_0px_15px_rgba(36,51,71,0.24)] rounded-2xl">
-          {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}"' %}
-          {% if item.icon.size_type == 'auto' %}
-          {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}" style="max-width: 100%; height: auto;"' %}
-          {% elif item.icon.size_type == 'auto_custom_max' %}
-          {% set sizeAttrs = 'width="{{ item.icon.max_width }}" height="{{ item.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
-          {% endif %}
-          {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
-          <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-        </div>
-        <h4 class="text-base md:text-lg text-center text-left font-bold text-[#243347] mx-2.5">{% inline_text field="title" value="{{ item.title }}" %}</h4>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+      <span class="text-xs font-medium leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.1em] md:tracking-[0.2em] mb-2 uppercase">{{ module.top_heading }}</span>
+      <h2 class="text-3xl md:text-5xl font-bold leading-10 text-center text-[#243347] mb-4 md:mb-8">{{ module.heading }}</h2>
+      <p class="text-base md:text-lg leading-snug text-center text-[#5D636D] max-w-[591px]">{{ module.content }}</p>
+      <ul class="flex gap-4 md:gap-16 mt-14">
+        {% for item in module.icon_group %}
+        {% if item.icon.src %}
+        <li class="flex items-center gap-2.5 flex-wrap md:flex-nowrap justify-center">
+          <div class="w-10 md:w-16 h-10 md:h-16 flex items-center justify-center md:p-2 bg-white shadow-[0px_0px_15px_rgba(36,51,71,0.24)] rounded-lg md:rounded-2xl">
+            {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}"' %}
+            {% if item.icon.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.icon.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.icon.max_width }}" height="{{ item.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
+            <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }} class="!max-w-[20px] md:!max-w-full">
+          </div>
+          <h4 class="text-sm md:text-lg text-center text-left font-bold text-[#243347]">{% inline_text field="title" value="{{ item.title }}" %}</h4>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>

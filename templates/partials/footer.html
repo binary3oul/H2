@@ -2,11 +2,11 @@
   templateType: global_partial
   label: Footer
 -->
-<footer class="footer bg-[#242C3E] w-full">
-  <div class="container py-16 grid grid-cols-1 md:grid-cols-4 w-fit md:w-full">
+<footer class="footer bg-[#243347] md:bg-[#242C3E] w-full">
+  <div class="container mx-0 md:mx-auto py-9 md:py-16 grid grid-cols-4 w-full">
     <div class="col-span-1">
-      <img src={{ get_asset_url('/theherd/images/footer-logo.png') }} alt="The Herd" />
-      <ul class="flex items-center gap-4 my-10 ml-1">
+      <img src={{ get_asset_url('/theherd/images/footer-logo.png') }} class="md:flex hidden" alt="The Herd" />
+      <ul class="flex items-center gap-4 my-10 ml-1 md:flex hidden">
         <li>
           <a href="/">
             <img src={{ get_asset_url('/theherd/images/icons/facebook.svg') }} />
@@ -33,8 +33,9 @@
           </a>
         </li>
       </ul>
+      <label class="block md:hidden text-white text-base font-bold text-right uppercase">The Herd</label>
     </div>
-    <div class="col-span-1 text-white space-y-5 my-4">
+    <div class="col-span-1 text-white space-y-5 my-4 hidden md:block">
       <h1 class="font-bold">About</h1>
       <ul class="space-y-5">
         <li>Services</li>
@@ -44,7 +45,7 @@
         <li>Resources</li>
       </ul>
     </div>
-    <div class="col-span-1 md:col-span-2 my-4 space-y-5 text-white">
+    <div class="col-span-1 text-white md:col-span-2 my-4 space-y-5 hidden md:block">
       <h1 class="font-bold">Services</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 space-y-5 md:space-y-0">
         <ul class="space-y-5 col-span-1">
@@ -58,6 +59,21 @@
           <li>Branding</li>
           <li>Hubspot CRM</li>
           <li>Copywriting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-span-1 text-white space-y-6 mt-14 text-base font-bold block md:hidden">
+      <ul class="space-y-10">
+        <li>About</li>
+        <li>Services</li>
+        <li>Projects</li>
+      </ul>
+    </div>
+    <div class="col-span-2 text-white space-y-6 text-base font-bold mt-16 block md:hidden ml-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 space-y-5 md:space-y-0">
+        <ul class="space-y-10 col-span-1">
+          <li>Testimonials</li>
+          <li>Contacts</li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <div class="cstmHome-award">
-  <div class="bg-[#FAFBFF] py-14 md:py-24">
-    <div class="container mx-auto flex gap-6 flex-wrap md:flex-nowrap">
+  <div class="md:bg-[#FAFBFF] bg-white py-12 md:py-24">
+    <div class="container mx-auto gap-6 flex-wrap md:flex-nowrap md:flex hidden">
       <div class="w-full md:w-1/2 flex items-center">
         <ul class="flex flex-wrap items-center justify-center">
           {% for item in module.award_image %}
@@ -33,6 +33,37 @@
         <a href="{{ module.link_field }}" class="text-lg link-button font-bold leading-snug underline text-gray-600">{{ module.link_label }}</a>
         {% endif %}
       </div>
+    </div>
+    <div class="container mx-auto flex gap-2 flex-wrap md:flex-nowrap md:hidden justify-center">
+      {% if module.top_label %}
+      <span class="text-sm font-semibold leading-6 md:leading-10 text-center text-[#E76642] tracking-[0.2em] mb-2">{{ module.top_label }}</span>
+      {% endif %}
+      {% if module.heading %}
+      <h2 class="text-4xl font-bold leading-10 text-[#243347] mb-4 md:mb-8 text-center">{{ module.heading }}</h2>
+      {% endif %}
+      <ul class="flex flex-wrap items-center justify-center">
+        {% for item in module.award_image %}
+        <li class = "py-4 md:{{ loop.index > 2 ? "px-[3px] w-1/3" : "px-[34px] w-1/2" }}">
+          {% if item.src %}
+          {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}"' %}
+          {% if item.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ item.max_width }}" height="{{ item.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading }}"' : '' %}
+          <img src="{{ item.src }}" alt="{{ item.alt }}" {{ loadingAttr }} {{ sizeAttrs }} class="mx-auto {{ loop.index == 2 ? "ml-0" : '' }}">
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% if module.content %}
+      <p class="text-lg leading-snug text-[#5D636D] mb-4 text-center">Customers will view your online presence and accessibility as much as they will enjoy the service you provide. Each company’s target customers have different interests, so a one-size-fits-all approach won’t do.
+      </p>
+      {% endif %}
+      {% if module.link_label %}
+      <a href="{{ module.link_field }}" class="text-lg link-button font-bold leading-snug underline text-gray-600">{{ module.link_label }}</a>
+      {% endif %}
     </div>
   </div>
 </div>

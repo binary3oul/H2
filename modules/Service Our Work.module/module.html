@@ -1,13 +1,13 @@
 <div class="cstmourwork">
   {# Our Work #}
-  <div class="bg-gray-50 py-24">
+  <div class="bg-gray-50 md:py-24 py-9">
     <div class="container mx-auto">
       <h2
-          class="text-center text-4xl font-bold leading-10 text-center text-gray-800 mb-16"
+          class="text-center text-[32px] md:text-4xl font-bold leading-10 text-center text-[#243347] md:text-[#252525] md:mb-16 mb-9"
           >
         {{ module.heading }}
       </h2>
-      <div class="flex items-center space-x-4">
+      <div class="md:flex items-center space-x-4 hidden">
 
         {% if module.image_1.src %}
         {% set sizeAttrs = 'width="{{ module.image_1.width }}" height="{{ module.image_1.height }}"' %}
@@ -73,6 +73,29 @@
         {% set loadingAttr = module.image_5.loading != 'disabled' ? 'loading="{{ module.image_5.loading }}"' : '' %}
         <img class="rounded-2xl translate-y-4" src="{{ module.image_5.src }}" alt="{{ module.image_5.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
         {% endif %}
+      </div>
+      <div class="glide mx-auto block md:hidden">
+        <div class="glide__track md:w-[730px] w-4/5 mx-auto" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide p-4"> 
+              <img src={{ get_asset_url('/theherd/images/ourwork/slide-work.png') }} class="mx-auto" />
+            </li>
+            <li class="glide__slide p-4"> 
+              <img src={{ get_asset_url('/theherd/images/ourwork/slide-work.png') }} class="mx-auto" />
+            </li>
+            <li class="glide__slide p-4"> 
+              <img src={{ get_asset_url('/theherd/images/ourwork/slide-work.png') }} class="mx-auto" />
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="border-none glide__arrow glide__arrow--left top-[50%] left-0 shadow-none" data-glide-dir="<">
+            <img src={{ get_asset_url('/theherd/images/icons/arrow-left.png') }} class="w-1/2"/>
+          </button>
+          <button class="border-none glide__arrow glide__arrow--right top-[50%] right-0 shadow-none" data-glide-dir=">">
+            <img src={{ get_asset_url('/theherd/images/icons/arrow-right.png') }} class="w-1/2"/>
+          </button>
+        </div>
       </div>
     </div>
   </div>
