@@ -1,15 +1,16 @@
 <div class="cstmProject-Banner">
 
-  <div style="background-image: url('{{ module.main_bg_image.src }}')" class="bg-cover bg-no-repeat py-24">
+  <div style="background-image: url('{{ module.main_bg_image.src }}')" class="bg-cover bg-no-repeat pt-6 pb-12 md:py-24">
     <div class="container mx-auto flex">
-      <div class="flex-1">
-        <span class="text-xs font-semibold tracking-widest leading-10 text-red-500 uppercase">{{ module.top_heading }}</span>
-        <h1 class="text-5xl font-extrabold text-gray-800 mb-8">{{ module.heading }}</h1>
-        <p class="text-xl leading-snug text-gray-600 mb-8">{{ module.content }}</p>
-        
+      <div class="md:flex-1">
+        <span class="text-xs font-semibold tracking-[.2em] leading-10 text-[#E76642] pl-1 uppercase">{{ module.top_heading }}</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#243347] md:text-[#252525] mb-4 md:mb-8">{{ module.heading }}</h1>
+        <p class="text-sm md:text-xl leading-snug text-[#5D636D] mb-8 mr-4">{{ module.content }}
+          <img src={{ get_asset_url('/theherd/images/projects/🚀.png') }} class="absolute right-16 w-[40px] block md:hidden" />
+        </p>
         <a href="{{ module.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg">{{ module.button_label }}</a>
       </div>
-      <div class="relative w-1/2">
+      <div class="relative md:w-1/2 hidden md:block">
         {% if module.user_group_1.image_field.src %}
         <div class="z-2 w-80 min-h-28 bg-white shadow rounded-xl bg-opacity-40 flex p-4 pb-6 absolute top-[130px] right-[160px]">
           <div class="rounded-full overflow-hidden w-12 h-12 mr-4">  

@@ -7,18 +7,19 @@
 
 {% block body %}
     <div>
-        <div class="container flex items-center gap-x-20 my-16">
-            <div class="w-3/5">
+        <div class="container flex items-center gap-x-20 mt-4 md:my-16 flex-col md:flex-row">
+            <div class="md:w-3/5 w-full">
                 <span class="text-xs font-semibold leading-10 text-[#E76642] tracking-[.2em] uppercase block">Procacci Brothers</span>
-                <h1 class="text-5xl font-bold leading-10 text-neutral-800">Estrella Naciente</h1>
-                <p class="text-lg leading-snug text-[#5D636D] my-8">The “Estrella Naciente” Scholarship fund is dedicated to providing educational opportunities for young leaders in the Hispanic community. We created a video to detail these students’ struggles and highlight the company that is rewarding their hard work.
+                <h1 class="text-3xl md:text-5xl font-bold leading-10 md:text-neutral-800 text-[#243347]">Estrella Naciente</h1>
+                <p class="text-sm md:text-lg leading-normal md:leading-snug text-[#5D636D] my-2 md:my-8">The “Estrella Naciente” Scholarship fund is dedicated to providing educational opportunities for young leaders in the Hispanic community. We created a video to detail these students’ struggles and highlight the company that is rewarding their hard work.
                 </p>
             </div>
-            <div class="w-2/5">
-                <img src={{ get_asset_url('/theherd/images/ourwork/procacci-bg-1.png') }} class="w-full rounded-2xl"/>
+            <div class="md:w-2/5 w-full">
+                <img src={{ get_asset_url('/theherd/images/ourwork/procacci-bg-1.png') }} class="w-full rounded-2xl hidden md:block"/>
+                <img src={{ get_asset_url('/theherd/images/projects/plate-1.png') }} class="w-full rounded-2xl block md:hidden"/>
             </div>
         </div>
-        <div class="flex">
+        <div class="flex flex-col md:flex-row">
             <div class="flex-1 text-center bg-[#E76224] pt-9 pb-7">
                 <h1 class="text-white font-bold text-4xl mb-2">150%</h1>
                 <label class="text-white text-lg font-normal">Growth in site traffic and engagement</label>
@@ -33,34 +34,34 @@
             </div>
         </div>
     </div>
-    <div class="bg-slate-50 py-24">
-        <div class="container flex flex-col gap-y-24">
-            <div class="flex items-center gap-x-12">
-                <div class="flex flex-col space-y-6 flex-1">
-                    <h2 class="text-4xl font-bold leading-snug text-[#252525]">The Challenge</h2>
+    <div class="md:bg-slate-50 py-11 md:py-24">
+        <div class="container flex flex-col gap-y-12 md:gap-y-24">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12">
+                <div class="flex flex-col space-y-3 md:space-y-6 flex-1">
+                    <h2 class="text-xl md:text-4xl font-bold leading-snug text-[#252525] md:text-[#243347]">The Challenge</h2>
                     <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
                         Procacci Brothers wanted to raise awareness for their non-profit program, The “Estrella Naciente” Scholarship fund, which provides educational opportunities for young leaders in the Hispanic community. The challenge was to create a video that could showcase the struggles of these students and highlight the company’s efforts to reward their hard work.
                     </p>
                 </div>
-                <div class="flex-1 relative">
+                <div class="flex-1 relative w-full">
                     <img src={{ get_asset_url('/theherd/images/projects/challenge.png') }} class="w-full" />
                     <button data-modal-target="popup-modal" data-modal-toggle="popup-modal"><img src={{ get_asset_url('/theherd/images/projects/play.png') }} class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3" /></button>
                 </div>
             </div>
-            <div class="flex items-center gap-x-12">
-                <div class="flex-1">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12 border-t-2 border-[#e1e1e1] md:border-0 pt-12 md:pt-0">
+                <div class="flex-1 order-2 md:order-1">
                     <img src={{ get_asset_url('/theherd/images/projects/strategy.png') }} />
                 </div>
-                <div class="flex flex-1 flex-col space-y-6">
-                    <h2 class="text-4xl font-bold leading-snug text-[#252525]">Strategy</h2>
+                <div class="flex flex-col space-y-3 md:space-y-6 flex-1 order-1 md:order-2">
+                    <h2 class="text-xl md:text-4xl font-bold leading-snug text-[#252525] md:text-[#243347]">Strategy</h2>
                     <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
                         We developed a documentary-style video that would take the viewers on a journey through the struggles of these students and the generosity of the Procacci organization. We captured interviews with scholarship recipients, highlighting their stories and aspirations. We also spent time touring and filming the Procacci facilities to showcase the company's dedication to providing healthy, high-quality produce.
                     </p>
                 </div>
             </div>
-            <div class="flex items-center gap-x-12">
-                <div class="flex flex-1 flex-col space-y-6">
-                    <h2 class="text-4xl font-bold leading-snug text-[#252525]">Results</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12 border-t-2 border-[#e1e1e1] md:border-0 pt-12 md:pt-0">
+                <div class="flex flex-col space-y-3 md:space-y-6 flex-1">
+                    <h2 class="text-xl md:text-4xl font-bold leading-snug text-[#252525] md:text-[#243347]">Results</h2>
                     <p class="mb-7 text-lg leading-snug text-[#5D636D] font-normal">
                         The resulting video was a touching tribute to the struggles and triumphs of the scholarship recipients, and the generous contributions of the Procacci Brothers. It helped raise awareness for the scholarship program and showcased the company's commitment to the Hispanic community. The video was widely shared on social media and received positive feedback from viewers who were inspired by the student's determination to succeed despite their obstacles. Overall, the video succeeded in achieving its goal of spreading awareness for the scholarship fund and highlighting the charitable efforts of the Procacci Brothers.
                     </p>
@@ -69,15 +70,15 @@
                     <img src={{ get_asset_url('/theherd/images/projects/results.png') }} />
                 </div>
             </div>
-            <div class="text-center">
+            <div class="text-center hidden md:block">
                 <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg font-semibold">Let's chat!</a>
             </div>
         </div>
     </div>
-    <div class="pt-20 pb-24">
+    <div class="bg-slate-50 md:bg-white pt-20 pb-24">
         <div class="container">
             <h2 class="text-4xl font-bold leading-10 text-[#252525] text-center mb-20">More Success Stores</h2>
-            <div class="grid md:grid-cols-4 grid-cols-1 gap-8">
+            <div class="md:grid-cols-4 grid-cols-1 gap-8 hidden md:grid">
                 <div class="relative md:max-w-64 md:max-h-64 project overflow-hidden w-[360px] md:w-fit mx-auto w-[360px] md:w-fit mx-auto">
                     <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-bg.png') }} class="w-full h-full brightness-50 project__img"/>
                     <img src={{ get_asset_url('/theherd/images/ourwork/one-historic-logo.png') }} class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 brightness-100"/>
@@ -117,6 +118,29 @@
                     <img src={{ get_asset_url('/theherd/images/ourwork/endvr-bg.png') }} class="w-full h-full brightness-50 project__img"/>
                     <img src={{ get_asset_url('/theherd/images/ourwork/endvr-logo.png') }} class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 brightness-100"/>
                     <div class="absolute w-100 h-52 bg-neutral-50 p-6 text-lg md:top-[248px] top-[360px] font-normal project__introduction">We increased SEO searches by %151 and improved discoverability</div>
+                </div>
+            </div>
+            <div class="glide mx-auto block md:hidden">
+                <div class="glide__track md:w-[730px] w-4/5 mx-auto" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide p-4"> 
+                      <img src={{ get_asset_url('/theherd/images/ourwork/slide-work.png') }} class="mx-auto" />
+                    </li>
+                    <li class="glide__slide p-4"> 
+                      <img src={{ get_asset_url('/theherd/images/ourwork/slide-work.png') }} class="mx-auto" />
+                    </li>
+                    <li class="glide__slide p-4"> 
+                      <img src={{ get_asset_url('/theherd/images/ourwork/slide-work.png') }} class="mx-auto" />
+                    </li>
+                  </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                  <button class="border-none glide__arrow glide__arrow--left top-[50%] left-0 shadow-none" data-glide-dir="<">
+                    <img src={{ get_asset_url('/theherd/images/icons/arrow-left.png') }} class="w-1/2"/>
+                  </button>
+                  <button class="border-none glide__arrow glide__arrow--right top-[50%] right-0 shadow-none" data-glide-dir=">">
+                    <img src={{ get_asset_url('/theherd/images/icons/arrow-right.png') }} class="w-1/2 float-right"/>
+                  </button>
                 </div>
             </div>
         </div>

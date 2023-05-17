@@ -8,45 +8,51 @@
 
 {% block body %}
   {# Banner #}
-  <div class="bg-slate-50 py-16">
-    <div class="container mx-auto ">
-      <div class="mb-16">
-        <span class="text-xs font-semibold tracking-widest leading-10 text-center text-[#E76642] uppercase block">About Us</span>
-        <h1 class="text-5xl font-bold leading-10 text-center text-gray-800">Who We Are</h1>
+  <div class="bg-slate-50 py-6 md:py-16">
+    <div class="container mx-auto">
+      <div class="mb-6 md:mb-16">
+        <span class="text-xs font-semibold tracking-[.2em] leading-10 text-center text-[#E76642] uppercase block">About Us</span>
+        <h1 class="text-3xl md:text-5xl font-bold leading-10 text-center text-gray-800">Who We Are</h1>
       </div>
 
-      <div class="flex">
-        <div class="w-1/2 flex flex-col justify-center">
-          <h2 class="text-4xl font-bold leading-10 text-gray-800 mb-4">The Herd Mentality</h2>
-          <p class="text-lg leading-snug text-gray-600">We help our clients identify and connect with their target audience, and we use data-driven insights to craft effective campaigns that drive results. We understand that no two businesses are exactly alike, and we take a customized approach to every project we work on. Whether you're a small startup or a large corporation, we have the expertise and creativity to help you achieve your marketing goals. So if you're looking to build a strong, engaged following for your brand, let us help you Gather the Herd.</p>
+      <div class="flex flex-col md:flex-row gap-6 md:gap-0">
+        <div class="flex-1 flex flex-col justify-center">
+          <h2 class="text-xl md:text-4xl font-bold leading-snug text-[#252525] md:text-[#243347] my-4">The Herd Mentality</h2>
+          <p class="text-sm md:text-lg leading-snug text-gray-600">We help our clients identify and connect with their target audience, and we use data-driven insights to craft effective campaigns that drive results. We understand that no two businesses are exactly alike, and we take a customized approach to every project we work on. Whether you're a small startup or a large corporation, we have the expertise and creativity to help you achieve your marketing goals. So if you're looking to build a strong, engaged following for your brand, let us help you Gather the Herd.</p>
         </div>
 
-        <div class="w-1/2 flex items-center justify-center">
+        <div class="flex-1 flex items-center justify-center">
           <img src={{ get_asset_url('/theherd/images/aboutgraphic.svg') }} />
         </div>
       </div>
     </div>
   </div>
   {# Award Winning Service #}
-    <div class="container mx-auto flex my-20">
-      <div class="flex w-1/2 gap-8 items-center">
-        <img src={{ get_asset_url('/theherd/images/awards/telly.png') }} class="w-max h-max" alt="">
-        <img src={{ get_asset_url('/theherd/images/awards/bestbiz.png') }} class="w-max h-max" alt="">
-        <img src={{ get_asset_url('/theherd/images/awards/goldsteve.png') }} class="w-max h-max" alt="">
+    <div class="container mx-auto flex flex-col md:flex-row my-9 md:my-20">
+      <div class="flex flex-1 justify-around items-center md:order-1 order-2">
+        <div class="flex-1">
+          <img src={{ get_asset_url('/theherd/images/awards/telly.png') }} class="w-max h-max m-auto" alt="">
+        </div>
+        <div class="flex-1">
+          <img src={{ get_asset_url('/theherd/images/awards/bestbiz.png') }} class="w-max h-max m-auto" alt="">
+        </div>
+        <div class="flex-1">
+          <img src={{ get_asset_url('/theherd/images/awards/goldsteve.png') }} class="w-max h-max m-auto" alt="">
+        </div>
       </div>
-      <div class="w-1/2">
-        <h2 class="text-4xl font-bold text-gray-800">Award Winning Service</h2>
+      <div class="flex-1 order-1 md:order-2">
+        <h2 class="text-xl md:text-4xl font-bold leading-snug text-[#252525] md:text-[#243347] my-4">Award Winning Service</h2>
         <p class="text-lg leading-snug text-gray-600 my-4">A marketing company has received awards for its website including the "Golden Web", "Platinum Content" and "Diamond Traffic" from the "International Web Standards Association" (IWSA) for design, content and website traffic</p>
       </div>
     </div>
 
   {# Our Team #}
-  <div class="bg-slate-50 py-20">
+  <div class="bg-slate-50 pt-8 pb-12 md:py-20">
     <div class="container mx-auto px-0">
-      <h2 class="text-4xl font-bold leading-10 text-center text-gray-800 my-4">Our Herd</h2>
-      <p class="text-lg leading-snug text-center text-gray-600 w-2/3 mx-auto">Our marketing team is a group of experts who increase conversions with our clients using their unique skills and abilities. Resulting in increased leads and sales.</p>
+      <h2 class="text-xl md:text-4xl font-bold leading-snug text-[#252525] md:text-[#243347] text-center my-4">Our Herd</h2>
+      <p class="text-lg leading-snug text-center text-gray-600 w-full md:w-2/3 px-5 md:mx-auto">Our marketing team is a group of experts who increase conversions with our clients using their unique skills and abilities. Resulting in increased leads and sales.</p>
       {# members #}
-      <div class="flex flex-wrap gap-8 justify-around my-16">
+      <div class="flex-wrap gap-8 justify-around my-16 hidden md:flex">
         <div>
           <div class="rounded-full overflow-hidden">
             <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} />
@@ -155,22 +161,57 @@
           <span class="text-base leading-snug text-center text-[#E76642] capitalize block text-center max-w-[120px] mx-auto">Video</span>
         </div>
       </div>
+      <div class="glide mx-auto block md:hidden my-10">
+        <div class="glide__track md:w-[730px] w-4/5 mx-auto" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"> 
+              <div>
+                <img src={{ get_asset_url('/theherd/images/team/kyle.png') }} class="rounded-full mx-auto"/>
+                <h5 class="text-lg font-bold leading-snug text-center text-gray-800 my-4">Kyle</h5>
+                <span class="text-base leading-snug text-center text-[#E76642] capitalize block text-center max-w-[120px] mx-auto">Co-Founder, CEO</span>
+              </div>
+            </li>
+            <li class="glide__slide"> 
+              <div>
+                <img src={{ get_asset_url('/theherd/images/team/alexandra.png') }} class="rounded-full mx-auto"/>
+                <h5 class="text-lg font-bold leading-snug text-center text-gray-800 my-4">Alexandra</h5>
+                <span class="text-base leading-snug text-center text-[#E76642] capitalize block text-center max-w-[120px] mx-auto">Strategy</span>
+              </div>
+            </li>
+            <li class="glide__slide"> 
+              <div>
+                <img src={{ get_asset_url('/theherd/images/team/sean.png') }} class="rounded-full mx-auto"/>
+                <h5 class="text-lg font-bold leading-snug text-center text-gray-800 my-4">Sean</h5>
+                <span class="text-base leading-snug text-center text-[#E76642] capitalize block text-center max-w-[120px] mx-auto">Video</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="border-none glide__arrow glide__arrow--left top-[35%] left-[10%] shadow-none" data-glide-dir="<">
+            <img src={{ get_asset_url('/theherd/images/icons/arrow-left.png') }} class="w-1/2"/>
+          </button>
+          <button class="border-none glide__arrow glide__arrow--right top-[35%] right-[10%] shadow-none" data-glide-dir=">">
+            <img src={{ get_asset_url('/theherd/images/icons/arrow-right.png') }} class="w-1/2 float-right"/>
+          </button>
+        </div>
+      </div>
       <div class="text-center">
         <a href="#" class="inline-flex items-center justify-center h-12 px-7 py-3 button primary-button rounded-md text-lg">Let's Chat!</a>
       </div>
     </div>
   </div>
   {# Giving Back #}
-    <div class="container mx-auto my-20">
+    <div class="container mx-auto mt-8 mb-12 md:my-20">
       <div class="flex items-center gap-8">
         <div class="flex-1">
-          <span class="text-xs font-semibold tracking-widest leading-10 text-[#E76642] uppercase block">Giving Back</span>
+          <span class="text-xs font-semibold tracking-[.2em] leading-10 text-[#E76642] uppercase block">Giving Back</span>
           <h2 class="text-4xl font-bold leading-10 text-gray-800 mb-4">Give a Sheep</h2>
-          <p class="text-lg leading-snug text-gray-600">To achieve our mission of bringing “shear” joy around the globe, The Herd donates a portion of its revenue to Heifer International, a global nonprofit working to eradicate poverty and food insecurity.</p>
-          <a href="/"  class="inline-flex items-center justify-end text-lg font-bold leading-snug underline link-button my-8">Learn More</a>
+          <p class="text-sm md:text-lg leading-snug text-gray-600">To achieve our mission of bringing “shear” joy around the globe, The Herd donates a portion of its revenue to Heifer International, a global nonprofit working to eradicate poverty and food insecurity.</p>
+          <a href="/"  class="inline-flex items-center justify-end text-lg font-bold leading-snug underline link-button mt-8 md:my-8">Learn More</a>
         </div>
 
-        <div class="flex-1">
+        <div class="flex-1 hidden md:block">
           <img src={{ get_asset_url('/theherd/images/give-sheep.png') }} />
         </div>
       </div>

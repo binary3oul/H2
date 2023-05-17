@@ -1,9 +1,9 @@
 <div class="cstmOLW">
   {# Our Latest Work #}
-  <div class="py-[91px]">
+  <div class="md:mt-24 md:mb-28 my-12">
     <div class="container mx-auto">
       <h2 class="text-4xl font-bold leading-10 text-[#243347]">{{ module.heading }}</h2>
-      <div class="mt-8 mb-24">
+      <div class="md:mt-8 md:mb-20 mt-4 mb-9">
         <div class="inline-flex">
           <button data-dropdown-toggle="dropdown" class="text-lg font-semibold text-[#E76642] hover:border-gray-400 focus:outline-none appearance-none flex items-center" type="button">
             Types of Service 
@@ -27,7 +27,7 @@
             </ul>
           </div>
         </div>
-        <div class="inline-flex ml-12">
+        <div class="ml-12 hidden md:inline-flex">
           <button data-dropdown-toggle="dropdown" class="text-lg font-semibold text-[#E76642] hover:border-gray-400 focus:outline-none appearance-none flex items-center" type="button">
             Industry
             <img class="pl-4" src = {{ get_asset_url('/theherd/images/icons/dropdown.svg') }} alt = "dropdown icon"/>
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-      <ul class="flex flex-wrap justify-center gap-[10px] md:gap-[32px] my-14">
+      <ul class="flex flex-wrap justify-center gap-[10px] md:gap-[32px] my-12">
         {% for item in module.work_group %}
         {% if item.background_image.src %}
         {% set sizeAttrs = 'width="{{ item.background_image.width }}" height="{{ item.background_image.height }}"' %}
@@ -82,8 +82,8 @@
                    lg:h-[214px]
                    md:w-[30%]
                    md:h-[200px]
-                   w-[48%]
-                   h-[180px]
+                   w-[360px]
+                   h-[360px]
                    flex
                    items-center
                    justify-center

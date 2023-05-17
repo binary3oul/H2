@@ -12,6 +12,8 @@
     '.header--element, .header--toggle'
   );
   var emailGlobalUnsub = document.querySelector('input[name="globalunsub"]');
+  var glide = document.querySelector('.glide');
+  var compareImage = document.querySelector('.compare-images');
 
   // Functions
 
@@ -89,6 +91,7 @@
 
   // Execute JavaScript on document ready
   domReady(function () {
+    console.log('[compare-image]',)
     if (!document.body) {
       return;
     } else {
@@ -115,6 +118,89 @@
       // Function dependent on email unsubscribe from all input
       if (emailGlobalUnsub) {
         emailGlobalUnsub.addEventListener('change', toggleDisabled);
+      }
+
+      if (glide) {
+        new Glide('.glide', {
+          type: 'carousel',
+          startAt: 0,
+          perView: 1,
+          // autoplay: 6000,
+          arrows: {
+              prev: ".glide__arrow--left",
+              next: ".glide__arrow--right",
+          },
+        }).mount();
+      }
+
+      if(compareImage) {
+        let isClicked = false;
+
+        const image = document.querySelector(".compare__overlay");
+        const width = image.offsetWidth;
+        const height = image.offsetHeight;
+        const slider = document.createElement("div");
+        const circleSlider = document.createElement("div");
+        const endSlider = document.createElement("div");
+        compare();
+
+        function compare() {
+            image.parentElement.insertBefore(slider, image);
+            image.parentElement.insertBefore(circleSlider, image);
+            image.parentElement.insertBefore(endSlider, image);
+
+            slider.classList.add("absolute", "cursor-grab", "bg-white", "z-10", "w-0.5", "h-[45%]" )
+            circleSlider.classList.add("absolute", "cursor-grab", "z-20", "aspect-square", "h-[10%]", "rounded-full", "bg-[url({{ get_asset_url('/theherd/images/projects/drag-button.png') }})]", "bg-cover", "bg-no-repeat", "active:cursor-grabbing");
+            endSlider.classList.add("absolute", "cursor-grab", "bg-white", "z-10", "w-0.5", "h-[45%]")
+            circleSlider.style.top = "45%";
+            circleSlider.style.left = width / 2 - circleSlider.offsetWidth / 2 - 20 + "px";
+            endSlider.style.top = "55%";
+            endSlider.style.left = width / 2 - endSlider.offsetWidth / 2 + "px";
+
+            slider.style.top = 0;
+            slider.style.left = width / 2 - slider.offsetWidth / 2 + "px";
+            image.style.width = "50%";
+
+            circleSlider.addEventListener("mousedown", onSlideStart);
+            circleSlider.addEventListener("touchstart", onSlideStart);
+
+            window.addEventListener("mouseup", () => (isClicked = false));
+            window.addEventListener("touchstop", () => (isClicked = false));
+
+            window.addEventListener("mousemove", onSlideMove);
+            window.addEventListener("touchmove", onSlideMove);
+        }
+
+        function onSlideStart(event) {
+            event.preventDefault();
+            isClicked = true;
+        }
+
+        function onSlideMove(event) {
+            if (!isClicked) return;
+
+            doSlide(currentPosition(event));
+        }
+
+        function currentPosition(event = window.event) {
+            let xImage = image.getBoundingClientRect();
+            let x = 0;
+
+            x = event.pageX - xImage.left;
+
+            if (x < 0) x = 0;
+
+            if (x > width) x = width;
+
+            return x;
+        }
+
+        function doSlide(x) {
+            image.style.width = x + "px";
+            slider.style.left = image.offsetWidth - slider.offsetWidth / 2 + "px";
+            circleSlider.style.left = image.offsetWidth - circleSlider.offsetWidth / 2 + "px";
+            endSlider.style.left = image.offsetWidth - endSlider.offsetWidth / 2 + "px";
+        }
       }
     }
   });

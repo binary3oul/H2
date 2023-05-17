@@ -35,7 +35,7 @@
     </div>
     <div class="container flex flex-col gap-y-24 my-24">
         <h2 class="text-center text-[#252525] text-3xl font-bold">Development</h2>
-        <div class="relative mx-auto h-[var(--slider-height)] w-[var(--slider-width)]">
+        <div class="relative mx-auto h-[var(--slider-height)] w-[var(--slider-width)] compare-images">
             <div class="absolute h-[var(--slider-height)] w-[var(--slider-width)] rounded-md overflow-hidden select-none pointer-events-none">
               <img src={{ get_asset_url('/theherd/images/blogpostcover.png') }} class="h-[var(--slider-height)] w-[var(--slider-width)] object-cover rounded-2xl">
             </div>
@@ -47,74 +47,4 @@
             <a href="{{ module.consultation.link_field }}" class="inline-flex items-center justify-center h-12 px-7 py-3 button secondary-button rounded-md text-lg font-semibold">View The Full Website</a>
         </div>
     </div>
-    <script>
-    let isClicked = false;
-
-    const image = document.querySelector(".compare__overlay");
-    const width = image.offsetWidth;
-    const height = image.offsetHeight;
-    const slider = document.createElement("div");
-    const circleSlider = document.createElement("div");
-    const endSlider = document.createElement("div");
-    compare();
-
-    function compare() {
-        image.parentElement.insertBefore(slider, image);
-        image.parentElement.insertBefore(circleSlider, image);
-        image.parentElement.insertBefore(endSlider, image);
-
-        slider.classList.add("absolute", "cursor-grab", "bg-white", "z-10", "w-0.5", "h-[45%]" )
-        circleSlider.classList.add("absolute", "cursor-grab", "z-20", "aspect-square", "h-[10%]", "rounded-[50%]", "bg-[url({{ get_asset_url('/theherd/images/projects/drag-button.png') }})]", "bg-cover", "bg-no-repeat", "active:cursor-grabbing");
-        endSlider.classList.add("absolute", "cursor-grab", "bg-white", "z-10", "w-0.5", "h-[45%]")
-        circleSlider.style.top = "45%";
-        circleSlider.style.left = width / 2 - circleSlider.offsetWidth / 2 - 23 + "px";
-        endSlider.style.top = "55%";
-        endSlider.style.left = width / 2 - endSlider.offsetWidth / 2 + "px";
-
-        slider.style.top = 0;
-        slider.style.left = width / 2 - slider.offsetWidth / 2 + "px";
-        image.style.width = "50%";
-
-        circleSlider.addEventListener("mousedown", onSlideStart);
-        circleSlider.addEventListener("touchstart", onSlideStart);
-
-        window.addEventListener("mouseup", () => (isClicked = false));
-        window.addEventListener("touchstop", () => (isClicked = false));
-
-        window.addEventListener("mousemove", onSlideMove);
-        window.addEventListener("touchmove", onSlideMove);
-    }
-
-    function onSlideStart(event) {
-        event.preventDefault();
-        isClicked = true;
-    }
-
-    function onSlideMove(event) {
-        if (!isClicked) return;
-
-        doSlide(currentPosition(event));
-    }
-
-    function currentPosition(event = window.event) {
-        let xImage = image.getBoundingClientRect();
-        let x = 0;
-
-        x = event.pageX - xImage.left;
-
-        if (x < 0) x = 0;
-
-        if (x > width) x = width;
-
-        return x;
-    }
-
-    function doSlide(x) {
-        image.style.width = x + "px";
-        slider.style.left = image.offsetWidth - slider.offsetWidth / 2 + "px";
-        circleSlider.style.left = image.offsetWidth - circleSlider.offsetWidth / 2 + "px";
-        endSlider.style.left = image.offsetWidth - endSlider.offsetWidth / 2 + "px";
-    }
-
-    </script>
 {% endblock body %}
